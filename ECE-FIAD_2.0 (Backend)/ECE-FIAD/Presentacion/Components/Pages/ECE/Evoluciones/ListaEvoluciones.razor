@@ -1,0 +1,94 @@
+﻿@page "/evoluciones"
+
+<div class="container mt-4">
+	<div class="card shadow-lg border-0 rounded-4">
+		<div class="card-header bg-primary text-white rounded-top-4">
+			<div class="d-flex justify-content-between align-items-center">
+				<h4 class="mb-0">
+					<i class="fas fa-calendar-check me-2"></i>Listado de Evoluciones
+				</h4>
+				<button class="btn btn-success" @onclick="NavegarACrear">
+					<i class="fas fa-plus-circle me-1"></i> Nueva evolucion
+				</button>
+			</div>
+		</div>
+
+		<div class="card-body p-2 bg-primary-subtle">
+
+			@if (evoluciones == null)
+			{
+				<div class="text-center py-5">
+					<i class="fas fa-spinner fa-pulse fa-2x text-primary"></i>
+					<p class="mt-2">Cargando evoluciones...</p>
+				</div>
+			}
+			else if (!evoluciones.Any())
+			{
+				<div class="alert alert-info text-center">
+					No hay evoluciones registradas.
+					<a href="#" @onclick="NavegarACrear">Crear la primera</a>
+				</div>
+			}
+			else
+			{
+				<div class="mb-3">
+					<label class="form-label fw-semibold">
+						<i class="fas fa-filter me-1"></i> Filtrar por Paciente
+					</label>
+					<select class="form-select" @onchange="FiltrarPorHistoria">
+						<option value="0">Todas las evoluciones</option>
+						@foreach (var historia in historias)
+						{
+							<option value="@historia.Id">@historia.Paciente?.NombreCompleto</option>
+						}
+					</select>
+				</div>
+				<!-- 🔵 TABLA -->
+
+				<div class="table-responsive">
+					<table class="table table-hover align-middle">
+						<thead class="table-light">
+							<tr>
+								<th class="text-center">Paciente</th>
+								<th class="text-center">Doctor</th>
+								<th class="text-center">Fecha</th>
+								<th class="text-center">Diagnostico</th>
+								<th class="text-center">Tratamiento</th>
+								<th class="text-center">Acciones</th>
+							</tr>
+						</thead>
+						<tbody>
+							@foreach (var evolucion in evolucionesFiltradas)
+							{
+								<tr>
+									<td class="text-center">@evolucion.HistoriaClinica.Paciente.NombreCompleto</td>
+									<td class="text-center">@evolucion.Doctor.NombreCompleto</td>
+									<td class="text-center">@evolucion.Fecha.ToString("dd/MM/yyyy")</td>
+									<td class="text-center">@Truncar(evolucion.Diagnostico)</td>
+									<td class="text-center">@Truncar(evolucion.Tratamiento)</td>
+
+									<td class="text-center">
+										<button class="btn btn-sm btn-info me-1"
+												@onclick="() => VerDetalles(evolucion.Id)">
+											<i class="fas fa-eye"></i>
+										</button>
+
+										<button class="btn btn-sm btn-warning me-1"
+												@onclick="() => Editar(evolucion.Id)">
+											<i class="fas fa-edit"></i>
+										</button>
+
+										<button class="btn btn-sm btn-danger"
+												@onclick="() => ConfirmarEliminar(evolucion)">
+											<i class="fas fa-trash-alt"></i>
+										</button>
+									</td>
+								</tr>
+							}
+						</tbody>
+					</table>
+				</div>
+			}
+		</div>
+	</div>
+</div>

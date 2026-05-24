@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using AutoMapper;
+using Aplicacion.DTOs.Pacientes;
+using Dominio.Entidades.Pacientes;
+namespace Aplicacion.Mapeos
+{
+    public class PacientePerfiles : Profile
+    {
+        public PacientePerfiles()
+        {
+            // De DTO a Entidad (para crear)
+            CreateMap<CrearPacienteDTO, Paciente>().ReverseMap();
+            // Para actualización
+            CreateMap<ActualizarPacienteDTO, Paciente>().ReverseMap();
+            // Para Consultar
+            CreateMap<Paciente, PacienteDTO>().ReverseMap();
+        }
+    }
+}

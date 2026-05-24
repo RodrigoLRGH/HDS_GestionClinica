@@ -1,0 +1,121 @@
+﻿@page "/editar-cita/{id:int}"
+@inject ICitaService CitaService
+@inject IToastrService Toastr
+@inject NavigationManager Navigation
+
+<div class="container mt-4">
+	<div class="card shadow-lg border-0">
+		<div class="card-header bg-warning text-dark">
+			<h5>
+				<i class="fas fa-calendar-edit me-2"></i>
+				Editar cita
+			</h5>
+		</div>
+
+		<div class="card-body">
+			@if (cargando)
+			{
+				<div class="text-center my-4">
+					<div class="spinner-border text-primary" role="status">
+						<span class="visually-hidden">Cargando...</span>
+					</div>
+					<p class="mt-2">Cargando datos...</p>
+				</div>
+			}
+			else
+			{
+				<EditForm Model="@citaEditar" OnValidSubmit="@GrabarCita">
+					<DataAnnotationsValidator />
+
+
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<label class="form-label fw-semibold">
+								<i class="fas fa-user"></i> Paciente
+							</label>
+
+							<InputSelect class="form-select" @bind-Value="citaEditar.IdPaciente">
+								<option value="0">Seleccione...</option>
+								@foreach (var paciente in pacientes)
+								{
+									<option value="@paciente.Id">@paciente.Nombres</option>
+								}
+							</InputSelect>
+						</div>
+
+						<div class="col-md-6 mb-3">
+							<label class="form-label fw-semibold">
+								<i class="fas fa-user-md"></i> Doctor
+							</label>
+
+							<InputSelect class="form-select" @bind-Value="citaEditar.IdDoctor">
+								<option value="0">Seleccione...</option>
+								@foreach (var doctor in doctores)
+								{
+									<option value="@doctor.Id">@doctor.Nombres</option>
+								}
+							</InputSelect>
+						</div>
+					</div>
+
+					<!-- Fecha -->
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<label class="form-label fw-semibold">
+								<i class="fas fa-clock"></i> Fecha y Hora
+							</label>
+							<input type="datetime-local"
+								   class="form-control"
+								   value="@citaEditar.FechaHora.ToString("yyyy-MM-ddTHH:mm")"
+								   @onchange="HandleFechaHoraChange" />
+							<ValidationMessage For="@(() => citaEditar.FechaHora)" />
+						</div>
+					</div>
+
+					<!-- Motivo -->
+					<div class="mb-3">
+						<label class="form-label fw-semibold">
+							<i class="fas fa-comment"></i> Motivo
+						</label>
+
+						<InputTextArea class="form-control" @bind-Value="citaEditar.Motivo" rows="3" />
+						<ValidationMessage For="@(() => citaEditar.Motivo)" />
+					</div>
+
+					<!-- Notas -->
+					<div class="mb-3">
+						<label class="form-label fw-semibold">
+							<i class="fas fa-sticky-note"></i> Notas
+						</label>
+
+						<InputTextArea class="form-control" @bind-Value="citaEditar.Notas" rows="2" />
+						<ValidationMessage For="@(() => citaEditar.Notas)" />
+					</div>
+					<div class="mb-3">
+						<label class="form-label fw-semibold">
+							<i class="fas fa-sticky-note"></i> Estado
+						</label>
+
+						<InputSelect class="form-select" @bind-Value="citaEditar.Estado">
+							@foreach (EstadoCita estado in Enum.GetValues(typeof(EstadoCita)))
+							{
+								<option value="@estado">@estado</option>
+							}
+						</InputSelect>
+					</div>
+					<div class="d-flex justify-content-end gap-2">
+						<button type="button" class="btn btn-secondary" @onclick="Cancelar">
+							Cancelar
+						</button>
+
+						<button type="submit" class="btn btn-primary">
+							Actualizar
+						</button>
+					</div>
+
+				</EditForm>
+			}
+
+		</div>
+	</div>
+</div>

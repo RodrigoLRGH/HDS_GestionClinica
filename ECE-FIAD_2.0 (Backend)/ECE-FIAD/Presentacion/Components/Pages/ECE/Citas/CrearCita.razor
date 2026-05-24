@@ -1,0 +1,118 @@
+﻿@page "/crear-cita"
+
+<div class="container mt-4">
+	<div class="row justify-content-center">
+		<div class="col-lg-8 col-md-10 col-sm-12">
+			<div class="card shadow-lg border-0 rounded-4">
+
+				<div class="card-header bg-success text-white">
+					<h5 class="mb-0">
+						<i class="fas fa-calendar-plus me-2"></i>Registrar nueva cita
+					</h5>
+				</div>
+
+				<div class="card-body p-4">
+
+					<EditForm Model="@citaDto" OnValidSubmit="@GrabarCita">
+						<DataAnnotationsValidator />
+
+						<!-- Paciente y Doctor -->
+						<div class="row">
+							<div class="col-md-6 mb-3">
+								<label class="form-label fw-semibold">
+									<i class="fas fa-user"></i> Paciente
+								</label>
+
+								<InputSelect class="form-select" @bind-Value="citaDto.IdPaciente">
+									<option value="0">Seleccione...</option>
+									@foreach (var paciente in pacientes)
+									{
+										<option value="@paciente.Id">@paciente.Nombres</option>
+									}
+								</InputSelect>
+							</div>
+
+							<div class="col-md-6 mb-3">
+								<label class="form-label fw-semibold">
+									<i class="fas fa-user-md"></i> Doctor
+								</label>
+
+								<InputSelect class="form-select" @bind-Value="citaDto.IdDoctor">
+									<option value="0">Seleccione...</option>
+									@foreach (var doctor in doctores)
+									{
+										<option value="@doctor.Id">@doctor.Nombres</option>
+									}
+								</InputSelect>
+							</div>
+						</div>
+
+						<!-- Fecha -->
+						<div class="row">
+							<div class="col-md-6 mb-3">
+								<label class="form-label fw-semibold">
+									<i class="fas fa-clock"></i> Fecha y Hora
+								</label>
+								<input type="datetime-local"
+									   class="form-control"
+									   value="@citaDto.FechaHora.ToString("yyyy-MM-ddTHH:mm")"
+									   @onchange="HandleFechaHoraChange" />
+								<ValidationMessage For="@(() => citaDto.FechaHora)" />
+							</div>
+						</div>
+
+						<!-- Motivo -->
+						<div class="mb-3">
+							<label class="form-label fw-semibold">
+								<i class="fas fa-comment"></i> Motivo
+							</label>
+
+							<InputTextArea class="form-control"
+										   @bind-Value="citaDto.Motivo"
+										   rows="3" />
+							<ValidationMessage For="@(() => citaDto.Motivo)" />
+						</div>
+
+						<!-- Notas -->
+						<div class="mb-3">
+							<label class="form-label fw-semibold">
+								<i class="fas fa-sticky-note"></i> Notas
+							</label>
+
+							<InputTextArea class="form-control"
+										   @bind-Value="citaDto.Notas"
+										   rows="2" />
+						</div>
+
+						<!-- Estados -->
+						<div class="mb-3">
+							<label class="form-label fw-semibold">
+								<i class="fas fa-sticky-note"></i> Estado
+							</label>
+
+							<InputSelect class="form-select" @bind-Value="citaDto.Estado">
+								<option value="">Seleccione...</option>
+								@foreach (EstadoCita estado in Enum.GetValues(typeof(EstadoCita)))
+								{
+									<option value="@estado">@estado</option>
+								}
+							</InputSelect>
+						</div>
+						<!-- Botones -->
+						<div class="d-flex justify-content-end gap-2 mt-3">
+							<button type="button" class="btn btn-secondary" @onclick="Cancelar">
+								Cancelar
+							</button>
+
+							<button type="submit" class="btn btn-success">
+								Guardar Cita
+							</button>
+						</div>
+
+					</EditForm>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

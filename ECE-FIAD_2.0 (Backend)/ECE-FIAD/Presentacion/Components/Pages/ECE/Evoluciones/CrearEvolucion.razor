@@ -1,0 +1,133 @@
+﻿@page "/crear-evolucion"
+
+<div class="container mt-4">
+	<div class="row justify-content-center">
+		<div class="col-lg-8 col-md-10 col-sm-12">
+			<div class="card shadow-lg border-0 rounded-4">
+
+				<div class="card-header bg-success text-white">
+					<h5 class="mb-0">
+						<i class="fas fa-calendar-plus me-2"></i>Registrar nueva evolucion
+					</h5>
+				</div>
+
+				<div class="card-body p-4">
+
+					<EditForm Model="@evolucionDto" OnValidSubmit="@GrabarEvolucion">
+						<FluentValidator />
+
+						<!-- Historia Clinica -->
+						<div class="row">
+
+							<div class="col-md-6 mb-3">
+								<label class="form-label fw-semibold">
+									<i class="fas fa-user-md"></i> Historia clinica
+								</label>
+
+								<InputSelect class="form-select" @bind-Value="evolucionDto.IdHistoriaClinica">
+									<option value="0">Seleccione...</option>
+									@foreach (var historiaClinica in historiasClinicas)
+									{
+										<option value="@historiaClinica.Id">@historiaClinica.Paciente.NombreCompleto</option>
+									}
+								</InputSelect>
+							</div>
+						</div>
+
+						<!-- Doctor -->
+						<div class="row">
+
+							<div class="col-md-6 mb-3">
+								<label class="form-label fw-semibold">
+									<i class="fas fa-user-md"></i> Doctor
+								</label>
+
+								<InputSelect class="form-select" @bind-Value="evolucionDto.IdDoctor">
+									<option value="0">Seleccione...</option>
+									@foreach (var doctor in doctores)
+									{
+										<option value="@doctor.Id">@doctor.Nombres (@doctor.Especialidad?.Nombre)</option>
+									}
+								</InputSelect>
+							</div>
+						</div>
+
+						<!-- Fecha -->
+						<div class="row">
+							<div class="col-md-6 mb-3">
+								<label class="form-label fw-semibold">
+									<i class="fas fa-clock"></i> Fecha y Hora
+								</label>
+
+								<input type="date" class="form-control" value="@evolucionDto.Fecha.ToLocalTime().ToString("yyyy-MM-dd")"
+									   @onchange="HandleFechaChange" />
+								<ValidationMessage For="@(() => evolucionDto.Fecha)" />
+							</div>
+						</div>
+
+						<!-- Diagnostico -->
+						<div class="mb-3">
+							<label class="form-label fw-semibold">
+								<i class="fas fa-comment"></i> Diagnostico
+							</label>
+
+							<InputTextArea class="form-control" @bind-Value="evolucionDto.Diagnostico" rows="3" maxlength="500" />
+							<small class="@(evolucionDto.Diagnostico?.Length >= 450 ? "text-danger" : "text-muted")">
+								@(evolucionDto.Diagnostico?.Length ?? 0) / 500 caracteres
+							</small>
+							<ValidationMessage For="@(() => evolucionDto.Diagnostico)" />
+						</div>
+
+						<!-- Tratamiento -->
+						<div class="mb-3">
+							<label class="form-label fw-semibold">
+								<i class="fas fa-comment"></i> Tratamiento
+							</label>
+
+							<InputTextArea class="form-control" @bind-Value="evolucionDto.Tratamiento" rows="3" maxlength="500" />
+							<small class="@(evolucionDto.Tratamiento?.Length >= 450 ? "text-danger" : "text-muted")">
+								@(evolucionDto.Tratamiento?.Length ?? 0) / 500 caracteres
+							</small>
+							<ValidationMessage For="@(() => evolucionDto.Tratamiento)" />
+						</div>
+
+						<!-- Notas -->
+						<div class="mb-3">
+							<label class="form-label fw-semibold">
+								<i class="fas fa-sticky-note"></i> Notas
+							</label>
+
+							<InputTextArea class="form-control" @bind-Value="evolucionDto.Notas" rows="2" maxlength="1000" />
+							<small class="@(evolucionDto.Notas?.Length >= 450 ? "text-danger" : "text-muted")">
+								@(evolucionDto.Notas?.Length ?? 0) / 1000 caracteres
+							</small>
+						</div>
+
+						<!-- Activo -->
+						<div class="col-md-6 mb-3">
+							<label class="form-label fw-semibold text-muted">
+								<i class="fas fa-toggle-on me-1"></i> Estado
+							</label>
+							<p class="form-control-plaintext px-2">
+								<span class="badge bg-success fs-6">Activo</span>
+							</p>
+						</div>
+
+						<!-- Botones -->
+						<div class="d-flex justify-content-end gap-2 mt-3">
+							<button type="button" class="btn btn-secondary" @onclick="Cancelar">
+								Cancelar
+							</button>
+
+							<button type="submit" class="btn btn-success">
+								Guardar evolucion
+							</button>
+						</div>
+
+					</EditForm>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

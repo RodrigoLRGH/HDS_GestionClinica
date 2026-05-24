@@ -1,0 +1,137 @@
+﻿@page "/editar-evolucion/{id:int}"
+@inject IEvolucionService EvolucionService
+@inject IToastrService Toastr
+@inject NavigationManager Navigation
+
+<div class="container mt-4">
+	<div class="row justify-content-center">
+		<div class="col-lg-8 col-md-10 col-sm-12">
+			<div class="card shadow-lg border-0 rounded-4">
+
+				<div class="card-header bg-warning text-white">
+					<h5 class="mb-0">
+						<i class="fas fa-user-edit me-2"></i>Editar evolucion
+					</h5>
+				</div>
+
+				<div class="card-body p-4">
+					@if (cargando)
+					{
+						<div class="text-center my-4">
+							<div class="spinner-border text-primary" role="status">
+								<span class="visually-hidden">Cargando...</span>
+							</div>
+							<p class="mt-2">Cargando datos...</p>
+						</div>
+					}
+					else
+					{
+						<EditForm Model="@evolucionEditar" OnValidSubmit="@GrabarEvolucion">
+							<FluentValidator />
+
+							<!-- Historia Clinica -->
+							<div class="row">
+
+								<div class="col-md-6 mb-3">
+									<label class="form-label fw-semibold">
+										<i class="fas fa-user-md"></i> Historia clinica
+									</label>
+
+									<InputSelect class="form-select" @bind-Value="evolucionEditar.IdHistoriaClinica">
+										<option value="0">Seleccione...</option>
+										@foreach (var historiaClinica in historiasClinicas)
+										{
+											<option value="@historiaClinica.Id">@historiaClinica.Paciente.NombreCompleto</option>
+										}
+									</InputSelect>
+								</div>
+							</div>
+
+							<!-- Doctor -->
+							<div class="row">
+
+								<div class="col-md-6 mb-3">
+									<label class="form-label fw-semibold">
+										<i class="fas fa-user-md"></i> Doctor
+									</label>
+
+									<InputSelect class="form-select" @bind-Value="evolucionEditar.IdDoctor">
+										<option value="0">Seleccione...</option>
+										@foreach (var doctor in doctores)
+										{
+											<option value="@doctor.Id">@doctor.Nombres</option>
+										}
+									</InputSelect>
+								</div>
+							</div>
+
+							<!-- Fecha -->
+							<div class="row">
+								<div class="col-md-6 mb-3">
+									<label class="form-label fw-semibold">
+										<i class="fas fa-clock"></i> Fecha
+									</label>
+									<input type="date"
+										   class="form-control"
+										   value="@evolucionEditar.Fecha.ToLocalTime().ToString("yyyy-MM-dd")"
+										   @onchange="HandleFechaChange" />
+									<ValidationMessage For="@(() => evolucionEditar.Fecha)" />
+								</div>
+							</div>
+
+							<!-- Diagnostico -->
+							<div class="mb-3">
+								<label class="form-label fw-semibold">
+									<i class="fas fa-comment"></i> Diagnostico
+								</label>
+
+								<InputTextArea class="form-control" @bind-Value="evolucionEditar.Diagnostico" rows="3" maxlength="500" />
+								<small class="@(evolucionEditar.Diagnostico?.Length >= 450 ? "text-danger" : "text-muted")">
+									@(evolucionEditar.Diagnostico?.Length ?? 0) / 500 caracteres
+								</small>
+								<ValidationMessage For="@(() => evolucionEditar.Diagnostico)" />
+							</div>
+
+							<!-- Tratamiento -->
+							<div class="mb-3">
+								<label class="form-label fw-semibold">
+									<i class="fas fa-comment"></i> Tratamiento
+								</label>
+
+								<InputTextArea class="form-control" @bind-Value="evolucionEditar.Tratamiento" rows="3" maxlength="500" />
+								<small class="@(evolucionEditar.Tratamiento?.Length >= 450 ? "text-danger" : "text-muted")">
+									@(evolucionEditar.Tratamiento?.Length ?? 0) / 500 caracteres
+								</small>
+								<ValidationMessage For="@(() => evolucionEditar.Tratamiento)" />
+							</div>
+
+							<!-- Notas -->
+							<div class="mb-3">
+								<label class="form-label fw-semibold">
+									<i class="fas fa-sticky-note"></i> Notas
+								</label>
+
+								<InputTextArea class="form-control" @bind-Value="evolucionEditar.Notas" rows="2" maxlength="1000" />
+								<small class="@(evolucionEditar.Notas?.Length >= 450 ? "text-danger" : "text-muted")">
+									@(evolucionEditar.Notas?.Length ?? 0) / 1000 caracteres
+								</small>
+							</div>
+
+							<!-- Botones -->
+							<div class="d-flex justify-content-end gap-2 mt-3">
+								<button type="button" class="btn btn-secondary" @onclick="Cancelar">
+									Cancelar
+								</button>
+
+								<button type="submit" class="btn btn-primary">
+									Actualizar evolucion
+								</button>
+							</div>
+
+						</EditForm>
+					}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

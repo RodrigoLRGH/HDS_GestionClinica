@@ -1,0 +1,115 @@
+﻿@page "/crear-historia"
+
+<div class="container mt-4">
+	<div class="row justify-content-center">
+		<div class="col-lg-8 col-md-10 col-sm-12">
+			<div class="card shadow-lg border-0 rounded-4">
+
+				<div class="card-header bg-success text-white">
+					<h5 class="mb-0">
+						<i class="fas fa-calendar-plus me-2"></i>Registrar nueva historia clinica
+					</h5>
+				</div>
+
+				<div class="card-body p-4">
+
+					<EditForm Model="@historiaClinicaDto" OnValidSubmit="@GrabarHistoriaClinica">
+						<FluentValidator />
+
+						<div class="row">
+							<!-- Paciente -->
+							<div class="col-md-6 mb-3">
+								<label class="form-label fw-semibold">
+									<i class="fas fa-user me-1"></i> Paciente
+								</label>
+								<InputSelect class="form-select" @bind-Value="historiaClinicaDto.IdPaciente">
+									<option value="0">Seleccione...</option>
+									@foreach (var paciente in pacientes)
+									{
+										<option value="@paciente.Id">@paciente.Nombres</option>
+									}
+								</InputSelect>
+								<ValidationMessage For="@(() => historiaClinicaDto.IdPaciente)" />
+							</div>
+
+							<!-- Fecha Apertura -->
+							<div class="col-md-6 mb-3">
+								<label class="form-label fw-semibold">
+									<i class="fas fa-clock me-1"></i> Fecha y Hora
+								</label>
+								<input type="datetime-local"
+									   class="form-control"
+									   value="@historiaClinicaDto.FechaApertura.ToLocalTime().ToString("yyyy-MM-ddTHH:mm")"
+									   @onchange="HandleFechaHoraChange" />
+								<ValidationMessage For="@(() => historiaClinicaDto.FechaApertura)" />
+							</div>
+						</div>
+
+						<div class="row">
+							<!-- Alergias -->
+							<div class="col-md-12 mb-3">
+								<label class="form-label fw-semibold">
+									<i class="fas fa-allergies me-1"></i> Alergias
+									<span class="text-muted fw-normal">(opcional)</span>
+								</label>
+								<InputTextArea class="form-control"
+											   @bind-Value="historiaClinicaDto.Alergias"
+											   rows="3"
+											   maxlength="500" />
+								<small class="@(historiaClinicaDto.Alergias?.Length >= 450 ? "text-danger" : "text-muted")">
+									@(historiaClinicaDto.Alergias?.Length ?? 0) / 500 caracteres
+								</small>
+							</div>
+						</div>
+
+						<div class="row">
+							<!-- Antecedentes Familiares -->
+							<div class="col-md-6 mb-3">
+								<label class="form-label fw-semibold">
+									<i class="fas fa-users me-1"></i> Antecedentes Familiares
+									<span class="text-muted fw-normal">(opcional)</span>
+								</label>
+								<InputTextArea class="form-control"
+											   @bind-Value="historiaClinicaDto.AntecedentesFamiliares"
+											   rows="3"
+											   maxlength="500" />
+								<small class="@(historiaClinicaDto.AntecedentesFamiliares?.Length >= 450 ? "text-danger" : "text-muted")">
+									@(historiaClinicaDto.AntecedentesFamiliares?.Length ?? 0) / 500 caracteres
+								</small>
+							</div>
+
+							<!-- Antecedentes Personales -->
+							<div class="col-md-6 mb-3">
+								<label class="form-label fw-semibold">
+									<i class="fas fa-user-injured me-1"></i> Antecedentes Personales
+									<span class="text-muted fw-normal">(opcional)</span>
+								</label>
+								<InputTextArea class="form-control"
+											   @bind-Value="historiaClinicaDto.AntecedentesPersonales"
+											   rows="3"
+											   maxlength="500" />
+								<small class="@(historiaClinicaDto.AntecedentesPersonales?.Length >= 450 ? "text-danger" : "text-muted")">
+									@(historiaClinicaDto.AntecedentesPersonales?.Length ?? 0) / 500 caracteres
+								</small>
+							</div>
+						</div>
+
+
+						<!-- Botones -->
+						<div class="d-flex justify-content-end gap-2 mt-3">
+							<button type="button" class="btn btn-secondary" @onclick="Cancelar">
+								Cancelar
+							</button>
+
+							<button type="submit" class="btn btn-success">
+								Guardar Historia Clinica
+							</button>
+						</div>
+
+					</EditForm>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

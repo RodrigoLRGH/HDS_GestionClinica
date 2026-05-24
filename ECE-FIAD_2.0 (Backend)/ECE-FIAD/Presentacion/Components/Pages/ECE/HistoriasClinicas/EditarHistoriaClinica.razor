@@ -1,0 +1,125 @@
+﻿@page "/editar-historia/{id:int}"
+@inject IHistoriaClinicaService serviciosHistoriaClinica
+@inject IPacienteService pacienteService
+@inject IToastrService Toastr
+@inject NavigationManager Navigation
+
+<div class="container mt-4">
+	<div class="card shadow-lg border-0">
+		<div class="card-header bg-warning text-dark">
+			<h5>
+				<i class="fas fa-file-medical me-2"></i> Editar Historia Clínica
+			</h5>
+		</div>
+		<div class="card-body p-4">
+
+			@if (cargando)
+			{
+				<div class="text-center my-4">
+					<div class="spinner-border text-primary" role="status">
+						<span class="visually-hidden">Cargando...</span>
+					</div>
+					<p class="mt-2">Cargando datos...</p>
+				</div>
+			}
+			else
+			{
+				<EditForm Model="@historiaClinicaEditar" OnValidSubmit="@GrabarHistoriaClinica">
+					<DataAnnotationsValidator />
+
+					<!-- Paciente -->
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<label class="form-label fw-semibold text-muted">
+								<i class="fas fa-user me-1"></i> Paciente
+							</label>
+							<p class="form-control-plaintext fw-bold bg-light px-2 rounded">
+								@(pacientes.FirstOrDefault(p => p.Id == historiaClinicaEditar.IdPaciente)?.Nombres ?? "—")
+							</p>
+						</div>
+					</div>
+
+					<!-- Fecha Apertura -->
+					<div class="col-md-6 mb-3">
+						<label class="form-label fw-semibold">
+							<i class="fas fa-clock me-1"></i> Fecha y Hora
+						</label>
+						<input type="datetime-local"
+							   class="form-control"
+							   value="@historiaClinicaEditar.FechaApertura.ToLocalTime().ToString("yyyy-MM-ddTHH:mm")"
+							   @onchange="HandleFechaHoraChange" />
+						<ValidationMessage For="@(() => historiaClinicaEditar.FechaApertura)" />
+					</div>
+
+					<!-- Alergias -->
+					<div class="mb-3">
+						<label class="form-label fw-semibold">
+							<i class="fas fa-allergies me-1"></i> Alergias
+							<span class="text-muted fw-normal">(opcional)</span>
+						</label>
+						<InputTextArea class="form-control"
+									   @bind-Value="historiaClinicaEditar.Alergias"
+									   rows="3"
+									   maxlength="500" />
+						<small class="@(historiaClinicaEditar.Alergias?.Length >= 450 ? "text-danger" : "text-muted")">
+							@(historiaClinicaEditar.Alergias?.Length ?? 0) / 500 caracteres
+						</small>
+					</div>
+
+					<div class="row">
+						<!-- Antecedentes Familiares -->
+						<div class="col-md-6 mb-3">
+							<label class="form-label fw-semibold">
+								<i class="fas fa-users me-1"></i> Antecedentes Familiares
+								<span class="text-muted fw-normal">(opcional)</span>
+							</label>
+							<InputTextArea class="form-control"
+										   @bind-Value="historiaClinicaEditar.AntecedentesFamiliares"
+										   rows="3"
+										   maxlength="500" />
+							<small class="@(historiaClinicaEditar.AntecedentesFamiliares?.Length >= 450 ? "text-danger" : "text-muted")">
+								@(historiaClinicaEditar.AntecedentesFamiliares?.Length ?? 0) / 500 caracteres
+							</small>
+						</div>
+
+						<!-- Antecedentes Personales -->
+						<div class="col-md-6 mb-3">
+							<label class="form-label fw-semibold">
+								<i class="fas fa-user-injured me-1"></i> Antecedentes Personales
+								<span class="text-muted fw-normal">(opcional)</span>
+							</label>
+							<InputTextArea class="form-control"
+										   @bind-Value="historiaClinicaEditar.AntecedentesPersonales"
+										   rows="3"
+										   maxlength="500" />
+							<small class="@(historiaClinicaEditar.AntecedentesPersonales?.Length >= 450 ? "text-danger" : "text-muted")">
+								@(historiaClinicaEditar.AntecedentesPersonales?.Length ?? 0) / 500 caracteres
+							</small>
+						</div>
+					</div>
+
+					<!-- Botones -->
+					<div class="d-flex justify-content-end gap-2 mt-3">
+						<button type="button" class="btn btn-secondary" @onclick="Cancelar">
+							<i class="fas fa-times me-1"></i> Cancelar
+						</button>
+						<button type="submit" class="btn btn-primary" disabled="@guardando">
+							@if (guardando)
+							{
+								<span class="spinner-border spinner-border-sm me-2" role="status"></span>
+								<span>Guardando...</span>
+							}
+							else
+							{
+								<i class="fas fa-save me-1"></i>
+								<span>Guardar Cambios</span>
+							}
+						</button>
+					</div>
+
+				</EditForm>
+
+			}
+		</div>
+	</div>
+</div>

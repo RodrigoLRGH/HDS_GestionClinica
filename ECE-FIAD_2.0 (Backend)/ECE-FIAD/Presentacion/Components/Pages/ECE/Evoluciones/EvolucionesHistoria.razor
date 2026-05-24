@@ -1,0 +1,79 @@
+﻿@page "/evoluciones-historia/{idHistoria:int}"
+
+<div class="container mt-4">
+    <div class="card shadow-lg border-0">
+        <div class="card-header bg-primary text-white">
+            <div class="d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">
+                    <i class="fas fa-notes-medical me-2"></i>
+                    Evoluciones de @nombrePaciente
+                </h5>
+                <button class="btn btn-success" @onclick="NavegarACrear">
+                    <i class="fas fa-plus-circle me-1"></i> Nueva Evolución
+                </button>
+            </div>
+        </div>
+        <div class="card-body">
+            @if (cargando)
+            {
+                <div class="text-center my-4">
+                    <div class="spinner-border text-primary" role="status"></div>
+                    <p class="mt-2">Cargando evoluciones...</p>
+                </div>
+            }
+            else if (!evoluciones.Any())
+            {
+                <div class="alert alert-info text-center">
+                    No hay evoluciones registradas para este paciente.
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-secondary mb-3">
+                    <i class="fas fa-chart-bar me-1"></i>
+                    Total de evoluciones: <strong>@evoluciones.Count</strong>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Doctor</th>
+                                <th>Fecha</th>
+                                <th>Diagnóstico</th>
+                                <th>Tratamiento</th>
+                                <th class="text-center">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var evolucion in evoluciones)
+                            {
+                                <tr>
+                                    <td>@evolucion.Doctor?.NombreCompleto</td>
+                                    <td>@(evolucion.Fecha.ToString("dd/MM/yyyy"))</td>
+                                    <td>@Truncar(evolucion.Diagnostico)</td>
+                                    <td>@Truncar(evolucion.Tratamiento)</td>
+                                    <td class="text-center">
+                                        <button class="btn btn-sm btn-info me-1"
+                                                @onclick="() => VerDetalles(evolucion.Id)">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-warning me-1"
+                                                @onclick="() => Editar(evolucion.Id)">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-secondary" @onclick="Volver">
+                <i class="fas fa-arrow-left me-1"></i> Volver
+            </button>
+        </div>
+    </div>
+</div>

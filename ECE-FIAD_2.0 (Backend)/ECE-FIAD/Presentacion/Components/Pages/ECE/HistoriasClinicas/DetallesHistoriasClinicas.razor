@@ -1,0 +1,175 @@
+﻿@page "/detalles-historia/{id:int}"
+@inject IHistoriaClinicaService serviciosHistoriaClinica
+@inject IPacienteService pacienteService
+@inject NavigationManager Navigation
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-sm-12">
+            <div class="card shadow-lg border-0 rounded-4">
+
+                <div class="card-header bg-info text-white text-center rounded-top-4">
+                    <h4 class="mb-0">
+                        <i class="fas fa-file-medical me-2"></i>Detalles de Historia Clínica
+                    </h4>
+                </div>
+
+                <div class="card-body p-4">
+                    @if (cargando)
+                    {
+                        <div class="text-center my-4">
+                            <div class="spinner-border text-info" role="status">
+                                <span class="visually-hidden">Cargando...</span>
+                            </div>
+                            <p class="mt-2">Cargando datos...</p>
+                        </div>
+                    }
+                    else if (historiaClinica == null)
+                    {
+                        <div class="alert alert-warning text-center">
+                            <i class="fas fa-exclamation-triangle me-2"></i>Historia clínica no encontrada
+                        </div>
+                    }
+                    else
+                    {
+                        <!-- Paciente -->
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-semibold text-muted">
+                                    <i class="fas fa-user me-1"></i> Paciente
+                                </label>
+                                <p class="form-control-plaintext fw-bold bg-light px-2 rounded">
+                                    @(pacientes.FirstOrDefault(p => p.Id == historiaClinica.IdPaciente)?.Nombres ?? "—")
+                                </p>
+                            </div>
+
+                            <!-- Activo -->
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-semibold text-muted">
+                                    <i class="fas fa-toggle-on me-1"></i> Estado
+                                </label>
+                                <p class="form-control-plaintext px-2">
+                                    @if (historiaClinica.Activo)
+                                    {
+                                        <span class="badge bg-success fs-6">Activo</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-secondary fs-6">Inactivo</span>
+                                    }
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Fecha Apertura -->
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-semibold text-muted">
+                                    <i class="fas fa-clock me-1"></i> Fecha de Apertura
+                                </label>
+                                <p class="form-control-plaintext fw-bold bg-light px-2 rounded">
+                                    @historiaClinica.FechaApertura.ToLocalTime().ToString("dd/MM/yyyy HH:mm")
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Alergias -->
+                            <div class="col-md-12 mb-3">
+                                <label class="form-label fw-semibold text-muted">
+                                    <i class="fas fa-allergies me-1"></i> Alergias
+                                </label>
+                                <p class="form-control-plaintext bg-light px-2 rounded">
+                                    @(string.IsNullOrEmpty(historiaClinica.Alergias) ? "—" : historiaClinica.Alergias)
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Antecedentes Familiares -->
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-semibold text-muted">
+                                    <i class="fas fa-users me-1"></i> Antecedentes Familiares
+                                </label>
+                                <p class="form-control-plaintext bg-light px-2 rounded">
+                                    @(string.IsNullOrEmpty(historiaClinica.AntecedentesFamiliares) ? "—" : historiaClinica.AntecedentesFamiliares)
+                                </p>
+                            </div>
+
+                            <!-- Antecedentes Personales -->
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-semibold text-muted">
+                                    <i class="fas fa-user-injured me-1"></i> Antecedentes Personales
+                                </label>
+                                <p class="form-control-plaintext bg-light px-2 rounded">
+                                    @(string.IsNullOrEmpty(historiaClinica.AntecedentesPersonales) ? "—" : historiaClinica.AntecedentesPersonales)
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Fechas de auditoría -->
+                        <hr class="my-3" />
+                        <h6 class="text-muted mb-3">
+                            <i class="fas fa-history me-1"></i> Información de Registro
+                        </h6>
+
+                        <div class="row">
+                            <!-- Fecha Creación -->
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label fw-semibold text-muted">
+                                    <i class="fas fa-calendar-plus me-1"></i> Fecha de Creación
+                                </label>
+                                <p class="form-control-plaintext bg-light px-2 rounded">
+                                    @historiaClinica.FechaDeCreacion.ToLocalTime().ToString("dd/MM/yyyy HH:mm")
+                                </p>
+                            </div>
+
+                            <!-- Fecha Modificación -->
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label fw-semibold text-muted">
+                                    <i class="fas fa-calendar-edit me-1"></i> Última Modificación
+                                </label>
+                                <p class="form-control-plaintext bg-light px-2 rounded">
+                                    @if (historiaClinica.FechaDeModificacion.HasValue)
+                                    {
+                                        @historiaClinica.FechaDeModificacion.Value.ToLocalTime().ToString("dd/MM/yyyy HH:mm")
+                                    }
+                                    else
+                                    {
+                                        <span class="text-muted">Sin modificaciones</span>
+                                    }
+                                </p>
+                            </div>
+
+                            <!-- Fecha Eliminación -->
+                            @if (historiaClinica.FechaDeEliminacion.HasValue)
+                            {
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label fw-semibold text-muted">
+                                        <i class="fas fa-calendar-times me-1"></i> Fecha de Eliminación
+                                    </label>
+                                    <p class="form-control-plaintext text-danger fw-bold px-2 rounded">
+                                        @historiaClinica.FechaDeEliminacion.Value.ToLocalTime().ToString("dd/MM/yyyy HH:mm")
+                                    </p>
+                                </div>
+                            }
+                        </div>
+
+                        <!-- Botones -->
+                        <div class="d-flex justify-content-end gap-2 mt-3">
+                            <button class="btn btn-secondary px-4" @onclick="Volver">
+                                <i class="fas fa-arrow-left me-1"></i> Volver
+                            </button>
+                            <button class="btn btn-warning px-4" @onclick="Editar">
+                                <i class="fas fa-edit me-1"></i> Editar
+                            </button>
+                            <button class="btn btn-info px-4" @onclick="VerEvoluciones">
+                                <i class="fas fa-notes-medical me-1"></i>Ver Evoluciones
+                            </button>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

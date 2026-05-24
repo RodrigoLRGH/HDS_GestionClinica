@@ -1,0 +1,317 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B9AC4E3F-9E49-43D3-B14A-AFD5F4B0A192}|Presentacion\\Presentacion.csproj|c:\\users\\rodri\\onedrive\\documentos\\6tosemestre\\herramientasdedesarrollodesoftware\\ece-fiad_2.0\\ece-fiad\\presentacion\\components\\pages\\ece\\evoluciones\\listaevoluciones.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9AC4E3F-9E49-43D3-B14A-AFD5F4B0A192}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\components\\pages\\ece\\evoluciones\\listaevoluciones.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9AC4E3F-9E49-43D3-B14A-AFD5F4B0A192}|Presentacion\\Presentacion.csproj|c:\\users\\rodri\\onedrive\\documentos\\6tosemestre\\herramientasdedesarrollodesoftware\\ece-fiad_2.0\\ece-fiad\\presentacion\\components\\pages\\ece\\evoluciones\\listaevoluciones.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B9AC4E3F-9E49-43D3-B14A-AFD5F4B0A192}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\components\\pages\\ece\\evoluciones\\listaevoluciones.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9AC4E3F-9E49-43D3-B14A-AFD5F4B0A192}|Presentacion\\Presentacion.csproj|c:\\users\\rodri\\onedrive\\documentos\\6tosemestre\\herramientasdedesarrollodesoftware\\ece-fiad_2.0\\ece-fiad\\presentacion\\components\\pages\\ece\\evoluciones\\evolucioneshistoria.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B9AC4E3F-9E49-43D3-B14A-AFD5F4B0A192}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\components\\pages\\ece\\evoluciones\\evolucioneshistoria.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9AC4E3F-9E49-43D3-B14A-AFD5F4B0A192}|Presentacion\\Presentacion.csproj|c:\\users\\rodri\\onedrive\\documentos\\6tosemestre\\herramientasdedesarrollodesoftware\\ece-fiad_2.0\\ece-fiad\\presentacion\\components\\pages\\ece\\evoluciones\\editarevolucion.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B9AC4E3F-9E49-43D3-B14A-AFD5F4B0A192}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\components\\pages\\ece\\evoluciones\\editarevolucion.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9AC4E3F-9E49-43D3-B14A-AFD5F4B0A192}|Presentacion\\Presentacion.csproj|c:\\users\\rodri\\onedrive\\documentos\\6tosemestre\\herramientasdedesarrollodesoftware\\ece-fiad_2.0\\ece-fiad\\presentacion\\components\\pages\\ece\\evoluciones\\editarevolucion.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9AC4E3F-9E49-43D3-B14A-AFD5F4B0A192}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\components\\pages\\ece\\evoluciones\\editarevolucion.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9AC4E3F-9E49-43D3-B14A-AFD5F4B0A192}|Presentacion\\Presentacion.csproj|c:\\users\\rodri\\onedrive\\documentos\\6tosemestre\\herramientasdedesarrollodesoftware\\ece-fiad_2.0\\ece-fiad\\presentacion\\components\\pages\\ece\\evoluciones\\detallesevoluciones.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9AC4E3F-9E49-43D3-B14A-AFD5F4B0A192}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\components\\pages\\ece\\evoluciones\\detallesevoluciones.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9AC4E3F-9E49-43D3-B14A-AFD5F4B0A192}|Presentacion\\Presentacion.csproj|c:\\users\\rodri\\onedrive\\documentos\\6tosemestre\\herramientasdedesarrollodesoftware\\ece-fiad_2.0\\ece-fiad\\presentacion\\components\\pages\\ece\\evoluciones\\detallesevoluciones.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B9AC4E3F-9E49-43D3-B14A-AFD5F4B0A192}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\components\\pages\\ece\\evoluciones\\detallesevoluciones.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9AC4E3F-9E49-43D3-B14A-AFD5F4B0A192}|Presentacion\\Presentacion.csproj|c:\\users\\rodri\\onedrive\\documentos\\6tosemestre\\herramientasdedesarrollodesoftware\\ece-fiad_2.0\\ece-fiad\\presentacion\\components\\pages\\ece\\evoluciones\\crearevolucion.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9AC4E3F-9E49-43D3-B14A-AFD5F4B0A192}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\components\\pages\\ece\\evoluciones\\crearevolucion.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9AC4E3F-9E49-43D3-B14A-AFD5F4B0A192}|Presentacion\\Presentacion.csproj|c:\\users\\rodri\\onedrive\\documentos\\6tosemestre\\herramientasdedesarrollodesoftware\\ece-fiad_2.0\\ece-fiad\\presentacion\\components\\pages\\ece\\evoluciones\\crearevolucion.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B9AC4E3F-9E49-43D3-B14A-AFD5F4B0A192}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\components\\pages\\ece\\evoluciones\\crearevolucion.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9AC4E3F-9E49-43D3-B14A-AFD5F4B0A192}|Presentacion\\Presentacion.csproj|c:\\users\\rodri\\onedrive\\documentos\\6tosemestre\\herramientasdedesarrollodesoftware\\ece-fiad_2.0\\ece-fiad\\presentacion\\components\\pages\\ece\\evoluciones\\evolucioneshistoria.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9AC4E3F-9E49-43D3-B14A-AFD5F4B0A192}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\components\\pages\\ece\\evoluciones\\evolucioneshistoria.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2425BF85-179F-4EBF-93BA-884F5BD1153D}|Infraestructura\\Infraestructura.csproj|c:\\users\\rodri\\onedrive\\documentos\\6tosemestre\\herramientasdedesarrollodesoftware\\ece-fiad_2.0\\ece-fiad\\infraestructura\\repositorios\\evolucionrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2425BF85-179F-4EBF-93BA-884F5BD1153D}|Infraestructura\\Infraestructura.csproj|solutionrelative:infraestructura\\repositorios\\evolucionrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21C6F395-8FB0-4DB4-A072-33ED079553E2}|Aplicacion\\Aplicacion.csproj|c:\\users\\rodri\\onedrive\\documentos\\6tosemestre\\herramientasdedesarrollodesoftware\\ece-fiad_2.0\\ece-fiad\\aplicacion\\abstracciones\\idoctorrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21C6F395-8FB0-4DB4-A072-33ED079553E2}|Aplicacion\\Aplicacion.csproj|solutionrelative:aplicacion\\abstracciones\\idoctorrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21C6F395-8FB0-4DB4-A072-33ED079553E2}|Aplicacion\\Aplicacion.csproj|c:\\users\\rodri\\onedrive\\documentos\\6tosemestre\\herramientasdedesarrollodesoftware\\ece-fiad_2.0\\ece-fiad\\aplicacion\\validaciones\\evoluciones\\actualizarevolucionvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21C6F395-8FB0-4DB4-A072-33ED079553E2}|Aplicacion\\Aplicacion.csproj|solutionrelative:aplicacion\\validaciones\\evoluciones\\actualizarevolucionvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88FA83F1-468E-4DC4-B2A8-7F02DBD4D354}|Dominio\\Dominio.csproj|c:\\users\\rodri\\onedrive\\documentos\\6tosemestre\\herramientasdedesarrollodesoftware\\ece-fiad_2.0\\ece-fiad\\dominio\\entidades\\evoluciones\\evolucion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88FA83F1-468E-4DC4-B2A8-7F02DBD4D354}|Dominio\\Dominio.csproj|solutionrelative:dominio\\entidades\\evoluciones\\evolucion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9AC4E3F-9E49-43D3-B14A-AFD5F4B0A192}|Presentacion\\Presentacion.csproj|c:\\users\\rodri\\onedrive\\documentos\\6tosemestre\\herramientasdedesarrollodesoftware\\ece-fiad_2.0\\ece-fiad\\presentacion\\components\\pages\\ece\\historiasclinicas\\listahistoriasclinicas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B9AC4E3F-9E49-43D3-B14A-AFD5F4B0A192}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\components\\pages\\ece\\historiasclinicas\\listahistoriasclinicas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21C6F395-8FB0-4DB4-A072-33ED079553E2}|Aplicacion\\Aplicacion.csproj|c:\\users\\rodri\\onedrive\\documentos\\6tosemestre\\herramientasdedesarrollodesoftware\\ece-fiad_2.0\\ece-fiad\\aplicacion\\validaciones\\evoluciones\\crearevolucionvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21C6F395-8FB0-4DB4-A072-33ED079553E2}|Aplicacion\\Aplicacion.csproj|solutionrelative:aplicacion\\validaciones\\evoluciones\\crearevolucionvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21C6F395-8FB0-4DB4-A072-33ED079553E2}|Aplicacion\\Aplicacion.csproj|c:\\users\\rodri\\onedrive\\documentos\\6tosemestre\\herramientasdedesarrollodesoftware\\ece-fiad_2.0\\ece-fiad\\aplicacion\\dtos\\evoluciones\\crearevoluciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21C6F395-8FB0-4DB4-A072-33ED079553E2}|Aplicacion\\Aplicacion.csproj|solutionrelative:aplicacion\\dtos\\evoluciones\\crearevoluciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 12,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DetallesEvoluciones.razor.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Presentacion\\Components\\Pages\\ECE\\Evoluciones\\DetallesEvoluciones.razor.cs",
+              "RelativeDocumentMoniker": "Presentacion\\Components\\Pages\\ECE\\Evoluciones\\DetallesEvoluciones.razor.cs",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Presentacion\\Components\\Pages\\ECE\\Evoluciones\\DetallesEvoluciones.razor.cs",
+              "RelativeToolTip": "Presentacion\\Components\\Pages\\ECE\\Evoluciones\\DetallesEvoluciones.razor.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T16:08:02.622Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EditarEvolucion.razor.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Presentacion\\Components\\Pages\\ECE\\Evoluciones\\EditarEvolucion.razor.cs",
+              "RelativeDocumentMoniker": "Presentacion\\Components\\Pages\\ECE\\Evoluciones\\EditarEvolucion.razor.cs",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Presentacion\\Components\\Pages\\ECE\\Evoluciones\\EditarEvolucion.razor.cs",
+              "RelativeToolTip": "Presentacion\\Components\\Pages\\ECE\\Evoluciones\\EditarEvolucion.razor.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T16:08:03.943Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DetallesEvoluciones.razor",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Presentacion\\Components\\Pages\\ECE\\Evoluciones\\DetallesEvoluciones.razor",
+              "RelativeDocumentMoniker": "Presentacion\\Components\\Pages\\ECE\\Evoluciones\\DetallesEvoluciones.razor",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Presentacion\\Components\\Pages\\ECE\\Evoluciones\\DetallesEvoluciones.razor",
+              "RelativeToolTip": "Presentacion\\Components\\Pages\\ECE\\Evoluciones\\DetallesEvoluciones.razor",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-14T16:08:01.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EditarEvolucion.razor",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Presentacion\\Components\\Pages\\ECE\\Evoluciones\\EditarEvolucion.razor",
+              "RelativeDocumentMoniker": "Presentacion\\Components\\Pages\\ECE\\Evoluciones\\EditarEvolucion.razor",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Presentacion\\Components\\Pages\\ECE\\Evoluciones\\EditarEvolucion.razor",
+              "RelativeToolTip": "Presentacion\\Components\\Pages\\ECE\\Evoluciones\\EditarEvolucion.razor",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-14T16:08:03.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EvolucionesHistoria.razor",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Presentacion\\Components\\Pages\\ECE\\Evoluciones\\EvolucionesHistoria.razor",
+              "RelativeDocumentMoniker": "Presentacion\\Components\\Pages\\ECE\\Evoluciones\\EvolucionesHistoria.razor",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Presentacion\\Components\\Pages\\ECE\\Evoluciones\\EvolucionesHistoria.razor",
+              "RelativeToolTip": "Presentacion\\Components\\Pages\\ECE\\Evoluciones\\EvolucionesHistoria.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-14T16:08:04.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ListaEvoluciones.razor",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Presentacion\\Components\\Pages\\ECE\\Evoluciones\\ListaEvoluciones.razor",
+              "RelativeDocumentMoniker": "Presentacion\\Components\\Pages\\ECE\\Evoluciones\\ListaEvoluciones.razor",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Presentacion\\Components\\Pages\\ECE\\Evoluciones\\ListaEvoluciones.razor",
+              "RelativeToolTip": "Presentacion\\Components\\Pages\\ECE\\Evoluciones\\ListaEvoluciones.razor",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAA0AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-14T16:08:05.833Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ListaEvoluciones.razor.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Presentacion\\Components\\Pages\\ECE\\Evoluciones\\ListaEvoluciones.razor.cs",
+              "RelativeDocumentMoniker": "Presentacion\\Components\\Pages\\ECE\\Evoluciones\\ListaEvoluciones.razor.cs",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Presentacion\\Components\\Pages\\ECE\\Evoluciones\\ListaEvoluciones.razor.cs",
+              "RelativeToolTip": "Presentacion\\Components\\Pages\\ECE\\Evoluciones\\ListaEvoluciones.razor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T17:17:33.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CrearEvolucion.razor.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Presentacion\\Components\\Pages\\ECE\\Evoluciones\\CrearEvolucion.razor.cs",
+              "RelativeDocumentMoniker": "Presentacion\\Components\\Pages\\ECE\\Evoluciones\\CrearEvolucion.razor.cs",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Presentacion\\Components\\Pages\\ECE\\Evoluciones\\CrearEvolucion.razor.cs",
+              "RelativeToolTip": "Presentacion\\Components\\Pages\\ECE\\Evoluciones\\CrearEvolucion.razor.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAAAAsAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T16:08:00.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CrearEvolucion.razor",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Presentacion\\Components\\Pages\\ECE\\Evoluciones\\CrearEvolucion.razor",
+              "RelativeDocumentMoniker": "Presentacion\\Components\\Pages\\ECE\\Evoluciones\\CrearEvolucion.razor",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Presentacion\\Components\\Pages\\ECE\\Evoluciones\\CrearEvolucion.razor",
+              "RelativeToolTip": "Presentacion\\Components\\Pages\\ECE\\Evoluciones\\CrearEvolucion.razor",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAAkAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-14T16:07:07.436Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EvolucionesHistoria.razor.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Presentacion\\Components\\Pages\\ECE\\Evoluciones\\EvolucionesHistoria.razor.cs",
+              "RelativeDocumentMoniker": "Presentacion\\Components\\Pages\\ECE\\Evoluciones\\EvolucionesHistoria.razor.cs",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Presentacion\\Components\\Pages\\ECE\\Evoluciones\\EvolucionesHistoria.razor.cs",
+              "RelativeToolTip": "Presentacion\\Components\\Pages\\ECE\\Evoluciones\\EvolucionesHistoria.razor.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T16:08:05.155Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EvolucionRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Infraestructura\\Repositorios\\EvolucionRepositorio.cs",
+              "RelativeDocumentMoniker": "Infraestructura\\Repositorios\\EvolucionRepositorio.cs",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Infraestructura\\Repositorios\\EvolucionRepositorio.cs",
+              "RelativeToolTip": "Infraestructura\\Repositorios\\EvolucionRepositorio.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T17:27:32.424Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ListaHistoriasClinicas.razor",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Presentacion\\Components\\Pages\\ECE\\HistoriasClinicas\\ListaHistoriasClinicas.razor",
+              "RelativeDocumentMoniker": "Presentacion\\Components\\Pages\\ECE\\HistoriasClinicas\\ListaHistoriasClinicas.razor",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Presentacion\\Components\\Pages\\ECE\\HistoriasClinicas\\ListaHistoriasClinicas.razor",
+              "RelativeToolTip": "Presentacion\\Components\\Pages\\ECE\\HistoriasClinicas\\ListaHistoriasClinicas.razor",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-14T17:20:15.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Evolucion.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Dominio\\Entidades\\Evoluciones\\Evolucion.cs",
+              "RelativeDocumentMoniker": "Dominio\\Entidades\\Evoluciones\\Evolucion.cs",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Dominio\\Entidades\\Evoluciones\\Evolucion.cs",
+              "RelativeToolTip": "Dominio\\Entidades\\Evoluciones\\Evolucion.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T17:21:33.073Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ActualizarEvolucionValidator.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Aplicacion\\Validaciones\\Evoluciones\\ActualizarEvolucionValidator.cs",
+              "RelativeDocumentMoniker": "Aplicacion\\Validaciones\\Evoluciones\\ActualizarEvolucionValidator.cs",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Aplicacion\\Validaciones\\Evoluciones\\ActualizarEvolucionValidator.cs",
+              "RelativeToolTip": "Aplicacion\\Validaciones\\Evoluciones\\ActualizarEvolucionValidator.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T17:26:09.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IDoctorRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Aplicacion\\Abstracciones\\IDoctorRepositorio.cs",
+              "RelativeDocumentMoniker": "Aplicacion\\Abstracciones\\IDoctorRepositorio.cs",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Aplicacion\\Abstracciones\\IDoctorRepositorio.cs",
+              "RelativeToolTip": "Aplicacion\\Abstracciones\\IDoctorRepositorio.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T17:27:19.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CrearEvolucionValidator.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Aplicacion\\Validaciones\\Evoluciones\\CrearEvolucionValidator.cs",
+              "RelativeDocumentMoniker": "Aplicacion\\Validaciones\\Evoluciones\\CrearEvolucionValidator.cs",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Aplicacion\\Validaciones\\Evoluciones\\CrearEvolucionValidator.cs",
+              "RelativeToolTip": "Aplicacion\\Validaciones\\Evoluciones\\CrearEvolucionValidator.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T17:12:43.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CrearEvolucionDTO.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Aplicacion\\DTOs\\Evoluciones\\CrearEvolucionDTO.cs",
+              "RelativeDocumentMoniker": "Aplicacion\\DTOs\\Evoluciones\\CrearEvolucionDTO.cs",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ECE-FIAD_2.0\\ECE-FIAD\\Aplicacion\\DTOs\\Evoluciones\\CrearEvolucionDTO.cs",
+              "RelativeToolTip": "Aplicacion\\DTOs\\Evoluciones\\CrearEvolucionDTO.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T17:12:37.315Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+﻿@page "/editar-doctor/{id:int}"
+@inject IDoctorService DoctorService
+@inject IToastrService Toastr
+@inject NavigationManager Navigation
+
+<div class="container mt-4">
+	<div class="row justify-content-center">
+		<div class="col-lg-8 col-md-10 col-sm-12">
+			<div class="card shadow-lg border-0">
+				<div class="card-header bg-warning text-dark">
+					<h5 class="mb-0">
+						<i class="fas fa-user-edit me-2"></i>Editar doctor: @doctorOriginal?.Nombres
+						@doctorOriginal?.Apellidos
+					</h5>
+				</div>
+				<div class="card-body p-4">
+					@if (doctorOriginal == null)
+					{
+						<div class="alert alert-info text-center">
+							<i class="fas fa-spinner fa-pulse me-2"></i>Cargando datos del doctor...
+						</div>
+					}
+					else
+					{
+						<div class="col-md-6 mb-3">
+							<label class="form-label fw-semibold text-muted">
+								<i class="fas fa-user me-1"></i> Id
+							</label>
+							<p class="form-control-plaintext fw-bold bg-light px-2">
+								@doctorEditar.Id
+							</p>
+						</div>
+						<EditForm Model="@doctorEditar" OnValidSubmit="@GrabarDoctor">
+							<FluentValidator />
+							<!-- Campos editables -->
+							<div class="row">
+								<div class="col-md-6 mb-3">
+									<label for="nombres" class="form-label fw-semibold">
+										<i class="fas fa-user me-1"></i> Nombres
+									</label>
+									<InputText id="nombres" class="form-control fw-bold bg-light" placeholder="Ej: Juan Carlos" @bind-Value="doctorEditar.Nombres" />
+									<ValidationMessage For="@(() => doctorEditar.Nombres)" class="text-danger small" />
+								</div>
+								<div class="col-md-6 mb-3">
+									<label for="apellidos" class="form-label fw-semibold">
+										<i class="fas fa-user me-1"></i> Apellidos
+									</label>
+									<InputText id="apellidos" class="form-control fw-bold bg-light" placeholder="Ej: Pérez Gómez" @bind-Value="doctorEditar.Apellidos" />
+									<ValidationMessage For="@(() => doctorEditar.Apellidos)" class="text-danger small" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6 mb-3">
+									<label for="telefono" class="form-label fw-semibold">
+										<i class="fas fa-phone me-1"></i> Teléfono
+									</label>
+									<InputText id="telefono" class="form-control fw-bold bg-light" placeholder="Ej: 8095551234" @bind-Value="doctorEditar.Telefono" />
+								</div>
+								<div class="col-md-6 mb-3">
+									<label for="email" class="form-label fw-semibold">
+										<i class="fas fa-envelope me-1"></i> Email
+									</label>
+									<InputText id="email" class="form-control fw-bold bg-light" placeholder="Ej: juan@example.com"
+											   @bind-Value="doctorEditar.Email" />
+									<ValidationMessage For="@(() => doctorEditar.Email)" class="text-danger small" />
+								</div>
+
+								<div class="col-md-6 mb-3">
+									<label for="horarioAtencion" class="form-label fw-semibold">
+										<i class="fas fa-calendar-alt me-1"></i> Horario de atencion
+									</label>
+									<InputText id="horarioAtencion" class="form-control" @bind-Value="doctorEditar.HorarioAtencion" />
+									<ValidationMessage For="@(() => doctorEditar.HorarioAtencion)" class="text-danger small" />
+								</div>
+								<div class="col-md-6 mb-3">
+									<label for="genero" class="form-label fw-semibold">
+										<i class="fas fa-venus-mars me-1"></i> Especialidad
+									</label>
+									<InputSelect id="especiliada" class="form-select" @bind-Value="doctorEditar.IdEspecialidad">
+										<option value="">Seleccione...</option>
+										@foreach (var item in especialidades)
+										{
+											<option value="@item.Id">@item.Nombre</option>
+										}
+									</InputSelect>
+								</div>
+								<div class="col-md-6 mb-3">
+									<label for="fechaContratacion" class="form-label fw-semibold">
+										<i class="fas fa-calendar-alt me-1"></i> Fecha de Contratacion
+									</label>
+									<InputDate id="fechaContratacion" class="form-control" @bind-Value="doctorEditar.FechaContratacion" />
+									<ValidationMessage For="@(() => doctorEditar.FechaContratacion)" class="text-danger small" />
+								</div>
+								<div class="col-md-6 mb-3">
+									<label for="descripcion" class="form-label fw-semibold">
+										<i class="fas fa-map-marker-alt me-1"></i> Descripcion
+									</label>
+
+									<InputText id="direccion" class="form-control" placeholder="Ej: Especialidad en..." @bind-Value="doctorEditar.Descripcion" />
+
+								</div>
+							</div>
+
+							<div class="d-flex justify-content-end gap-2 mt-3">
+								<button type="button" class="btn btn-secondary px-4" @onclick="Cancelar">
+									<i class="fas fa-times me-1"></i> Cancelar
+								</button>
+								<button type="submit" class="btn btn-primary px-4">
+									<i class="fas fa-save me-1"></i> Actualizar Doctor
+								</button>
+							</div>
+						</EditForm>
+					}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+@code {
+}
