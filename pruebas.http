@@ -1,0 +1,81 @@
+### Variables
+@baseUrl = http://localhost:5154
+@citaId = 13
+@pacienteId = 5
+@evolucionId = 7
+
+### ==================== CITAS ====================
+
+### Listar todas las citas
+GET {{baseUrl}}/api/citas
+
+###
+
+### Obtener una cita por ID
+GET {{baseUrl}}/api/citas/{{citaId}}
+
+###
+
+### Crear nueva cita
+POST {{baseUrl}}/api/citas
+Content-Type: application/json
+
+{
+    "idPaciente": 5,
+    "idDoctor": 13,
+    "fechaHora": "2026-06-20T10:00",
+    "motivo": "Consulta general",
+    "notas": "Primera visita",
+    "estado": 1
+}
+
+###
+
+### Actualizar cita
+PUT {{baseUrl}}/api/citas/{{citaId}}
+Content-Type: application/json
+
+{
+    "idPaciente": 5,
+    "idDoctor": 13,
+    "fechaHora": "2026-06-24T11:00",
+    "motivo": "Consulta general actualizada",
+    "notas": "Segunda visita",
+    "estado": 2
+}
+
+###
+
+### Cancelar cita
+DELETE {{baseUrl}}/api/citas/{{citaId}}
+
+### ==================== HISTORIAL ====================
+
+### Obtener historial completo de un paciente
+GET {{baseUrl}}/api/historial/paciente/{{pacienteId}}
+
+###
+
+### Obtener evolución por ID
+GET {{baseUrl}}/api/evoluciones/{{evolucionId}}
+
+###
+
+### Agregar evolución
+POST {{baseUrl}}/api/evoluciones
+Content-Type: application/json
+
+{
+    "idHistoriaClinica": 26,
+    "idDoctor": 13,
+    "fecha": "2026-05-23",
+    "diagnostico": "Diagnóstico de prueba",
+    "tratamiento": "Tratamiento de prueba",
+    "notas": "Notas opcionales",
+    "activo": true
+}
+
+### ==================== PACIENTES ====================
+
+### Listar pacientes activos
+GET {{baseUrl}}/api/pacientes/activos
