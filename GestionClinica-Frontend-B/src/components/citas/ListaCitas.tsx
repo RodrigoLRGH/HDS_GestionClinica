@@ -3,7 +3,6 @@ import { type Cita } from '../../types/Cita/Cita';
 import { EstadoCita } from '../../types/Enumeraciones/EstadoCita';
 import LoadingSpinner from '../common/LoadingSpinner';
 import ErrorAlert from '../common/ErrorAlert';
-import { useCitas } from '../../hooks/useCitas';
 import ModalConfirmacion from '../common/ModalConfirmacion';
 
 const textoEstado: Record<number, string> = {
@@ -25,12 +24,15 @@ const badgeEstado = (estado: number) => {
     return `badge rounded-pill ${clases[estado] ?? 'bg-secondary'}`;
 };
 
-const ListaCitas = ({ onNueva, onEditar, onDetalle }: {
+const ListaCitas = ({ citas, cargando, error, onCancelar, onNueva, onEditar, onDetalle }: {
+    citas: Cita[];
+    cargando: boolean;
+    error: string | null;
+    onCancelar: (id: number) => Promise<boolean>;
     onNueva: () => void;
     onEditar: (cita: Cita) => void;
     onDetalle: (cita: Cita) => void;
 }) => {
-    const { citas, cargando, error, cancelar } = useCitas();
     const [filtroPaciente, setFiltroPaciente] = useState('');
     const [filtroEstado, setFiltroEstado] = useState<number | ''>('');
     const [filtroFecha, setFiltroFecha] = useState('');
@@ -46,7 +48,7 @@ const ListaCitas = ({ onNueva, onEditar, onDetalle }: {
 
     const handleCancelar = async () => {
         if (citaACancelar !== null) {
-            await cancelar(citaACancelar);
+            await onCancelar(citaACancelar);
             setCitaACancelar(null);
         }
     };

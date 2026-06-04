@@ -12,7 +12,7 @@ type Vista = 'lista' | 'crear' | 'editar' | 'detalle';
 const CitasPage = () => {
     const [vista, setVista] = useState<Vista>('lista');
     const [citaSeleccionada, setCitaSeleccionada] = useState<Cita | undefined>();
-    const { crear, actualizar } = useCitas();
+    const { citas, cargando, error, crear, actualizar, cancelar, limpiarError } = useCitas();
 
     const handleGuardar = async (dto: CrearCitaDTO | ActualizarCitaDTO) => {
         let exito: boolean = false;
@@ -26,11 +26,20 @@ const CitasPage = () => {
         return exito;
     };
 
+    const handleCancelar = () => {
+        limpiarError();
+        setVista('lista');
+    };
+
     return (
         <>
             <div className="min-vh-100 bg-light p-3">
                 {vista === 'lista' && (
                     <ListaCitas
+                        citas={citas}
+                        cargando={cargando}
+                        error={error}
+                        onCancelar={cancelar}
                         onNueva={() => setVista('crear')}
                         onEditar={(cita) => { setCitaSeleccionada(cita); setVista('editar'); }}
                         onDetalle={(cita) => { setCitaSeleccionada(cita); setVista('detalle'); }} />
@@ -39,7 +48,8 @@ const CitasPage = () => {
                     <FormularioCita
                         citaEditar={vista === 'editar' ? citaSeleccionada : undefined}
                         onGuardar={handleGuardar}
-                        onCancelar={() => setVista('lista')} />
+                        onCancelar={handleCancelar}
+                        errorExterno={error} />
                 )}
                 {vista === 'detalle' && citaSeleccionada && (
                     <DetalleCita

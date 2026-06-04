@@ -27,10 +27,20 @@ export const useCitas = () => {
         setCargando(true);
         setError(null);
         try {
+            const duplicada = citas.find(c =>
+                c.idPaciente === dto.idPaciente &&
+                c.fechaHora.startsWith(dto.fechaHora)
+            );
+            if (duplicada) {
+                setError('Ya existe una cita para este paciente en esa fecha y hora');
+                return false;
+            }
+
             await crearCita(dto);
+
             await cargarCitas();
             return true;
-        } catch (error: any) {
+        } catch (error) {
             setError("Error al crear la cita");
             return false;
         } finally {
@@ -72,6 +82,6 @@ export const useCitas = () => {
         cargarCitas();
     }, []);
 
-    return { citas, cargando, error, crear, actualizar, cancelar };
+    return { citas, cargando, error, crear, actualizar, cancelar, limpiarError: () => setError(null) };
 
 }

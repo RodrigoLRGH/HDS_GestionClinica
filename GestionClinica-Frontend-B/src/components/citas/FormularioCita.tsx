@@ -11,9 +11,10 @@ interface Props {
     citaEditar?: Cita;
     onGuardar: (dto: CrearCitaDTO | ActualizarCitaDTO) => Promise<boolean>;
     onCancelar: () => void;
+    errorExterno?: string | null;
 }
 
-const FormularioCita = ({ citaEditar, onGuardar, onCancelar }: Props) => {
+const FormularioCita = ({ citaEditar, onGuardar, onCancelar, errorExterno }: Props) => {
     const { pacientes } = usePacientes();
     const { doctores } = useDoctores();
     const [guardando, setGuardando] = useState(false);
@@ -51,8 +52,7 @@ const FormularioCita = ({ citaEditar, onGuardar, onCancelar }: Props) => {
             ? { ...form, id: citaEditar.id } as ActualizarCitaDTO
             : form as CrearCitaDTO;
 
-        const exito = await onGuardar(dto);
-        if (!exito) setError('Error al guardar la cita');
+        await onGuardar(dto);
         setGuardando(false);
     };
 
@@ -66,7 +66,11 @@ const FormularioCita = ({ citaEditar, onGuardar, onCancelar }: Props) => {
                     </h2>
                 </div>
 
-                {error && <ErrorAlert mensaje={error} onCerrar={() => setError(null)} />}
+                {(error || errorExterno) && (
+                    <ErrorAlert
+                        mensaje={error ?? errorExterno ?? ''}
+                        onCerrar={() => { setError(null); }} />
+                )}
 
                 <div className="card shadow-sm rounded-3">
                     <div className="card-body p-4">
