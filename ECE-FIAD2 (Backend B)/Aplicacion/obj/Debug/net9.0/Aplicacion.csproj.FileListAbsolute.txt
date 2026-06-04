@@ -1,0 +1,31 @@
+C:\H_Diseno_WEB\ECE-FIAD2\Aplicacion\bin\Debug\net9.0\Aplicacion.deps.json
+C:\H_Diseno_WEB\ECE-FIAD2\Aplicacion\bin\Debug\net9.0\Aplicacion.dll
+C:\H_Diseno_WEB\ECE-FIAD2\Aplicacion\bin\Debug\net9.0\Aplicacion.pdb
+C:\H_Diseno_WEB\ECE-FIAD2\Aplicacion\bin\Debug\net9.0\Dominio.dll
+C:\H_Diseno_WEB\ECE-FIAD2\Aplicacion\bin\Debug\net9.0\Dominio.pdb
+C:\H_Diseno_WEB\ECE-FIAD2\Aplicacion\obj\Debug\net9.0\Aplicacion.csproj.AssemblyReference.cache
+C:\H_Diseno_WEB\ECE-FIAD2\Aplicacion\obj\Debug\net9.0\Aplicacion.GeneratedMSBuildEditorConfig.editorconfig
+C:\H_Diseno_WEB\ECE-FIAD2\Aplicacion\obj\Debug\net9.0\Aplicacion.AssemblyInfoInputs.cache
+C:\H_Diseno_WEB\ECE-FIAD2\Aplicacion\obj\Debug\net9.0\Aplicacion.AssemblyInfo.cs
+C:\H_Diseno_WEB\ECE-FIAD2\Aplicacion\obj\Debug\net9.0\Aplicacion.csproj.CoreCompileInputs.cache
+C:\H_Diseno_WEB\ECE-FIAD2\Aplicacion\obj\Debug\net9.0\Aplicacion.csproj.Up2Date
+C:\H_Diseno_WEB\ECE-FIAD2\Aplicacion\obj\Debug\net9.0\Aplicacion.dll
+C:\H_Diseno_WEB\ECE-FIAD2\Aplicacion\obj\Debug\net9.0\refint\Aplicacion.dll
+C:\H_Diseno_WEB\ECE-FIAD2\Aplicacion\obj\Debug\net9.0\Aplicacion.pdb
+C:\H_Diseno_WEB\ECE-FIAD2\Aplicacion\obj\Debug\net9.0\ref\Aplicacion.dll
+C:\Users\rodri\OneDrive\Documentos\6toSemestre\HerramientasDeDesarrolloDeSoftware\ProyectoFinalRep\HDS_GestionClinica\ECE-FIAD2 (Backend B)\Aplicacion\bin\Debug\net9.0\Aplicacion.deps.json
+C:\Users\rodri\OneDrive\Documentos\6toSemestre\HerramientasDeDesarrolloDeSoftware\ProyectoFinalRep\HDS_GestionClinica\ECE-FIAD2 (Backend B)\Aplicacion\bin\Debug\net9.0\Aplicacion.dll
+C:\Users\rodri\OneDrive\Documentos\6toSemestre\HerramientasDeDesarrolloDeSoftware\ProyectoFinalRep\HDS_GestionClinica\ECE-FIAD2 (Backend B)\Aplicacion\bin\Debug\net9.0\Aplicacion.pdb
+C:\Users\rodri\OneDrive\Documentos\6toSemestre\HerramientasDeDesarrolloDeSoftware\ProyectoFinalRep\HDS_GestionClinica\ECE-FIAD2 (Backend B)\Aplicacion\bin\Debug\net9.0\Dominio.dll
+C:\Users\rodri\OneDrive\Documentos\6toSemestre\HerramientasDeDesarrolloDeSoftware\ProyectoFinalRep\HDS_GestionClinica\ECE-FIAD2 (Backend B)\Aplicacion\bin\Debug\net9.0\Dominio.pdb
+C:\Users\rodri\OneDrive\Documentos\6toSemestre\HerramientasDeDesarrolloDeSoftware\ProyectoFinalRep\HDS_GestionClinica\ECE-FIAD2 (Backend B)\Aplicacion\obj\Debug\net9.0\Aplicacion.csproj.AssemblyReference.cache
+C:\Users\rodri\OneDrive\Documentos\6toSemestre\HerramientasDeDesarrolloDeSoftware\ProyectoFinalRep\HDS_GestionClinica\ECE-FIAD2 (Backend B)\Aplicacion\obj\Debug\net9.0\Aplicacion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rodri\OneDrive\Documentos\6toSemestre\HerramientasDeDesarrolloDeSoftware\ProyectoFinalRep\HDS_GestionClinica\ECE-FIAD2 (Backend B)\Aplicacion\obj\Debug\net9.0\Aplicacion.AssemblyInfoInputs.cache
+C:\Users\rodri\OneDrive\Documentos\6toSemestre\HerramientasDeDesarrolloDeSoftware\ProyectoFinalRep\HDS_GestionClinica\ECE-FIAD2 (Backend B)\Aplicacion\obj\Debug\net9.0\Aplicacion.AssemblyInfo.cs
+C:\Users\rodri\OneDrive\Documentos\6toSemestre\HerramientasDeDesarrolloDeSoftware\ProyectoFinalRep\HDS_GestionClinica\ECE-FIAD2 (Backend B)\Aplicacion\obj\Debug\net9.0\Aplicacion.csproj.CoreCompileInputs.cache
+C:\Users\rodri\OneDrive\Documentos\6toSemestre\HerramientasDeDesarrolloDeSoftware\ProyectoFinalRep\HDS_GestionClinica\ECE-FIAD2 (Backend B)\Aplicacion\obj\Debug\net9.0\Aplicacion.sourcelink.json
+C:\Users\rodri\OneDrive\Documentos\6toSemestre\HerramientasDeDesarrolloDeSoftware\ProyectoFinalRep\HDS_GestionClinica\ECE-FIAD2 (Backend B)\Aplicacion\obj\Debug\net9.0\Aplicacion.csproj.Up2Date
+C:\Users\rodri\OneDrive\Documentos\6toSemestre\HerramientasDeDesarrolloDeSoftware\ProyectoFinalRep\HDS_GestionClinica\ECE-FIAD2 (Backend B)\Aplicacion\obj\Debug\net9.0\Aplicacion.dll
+C:\Users\rodri\OneDrive\Documentos\6toSemestre\HerramientasDeDesarrolloDeSoftware\ProyectoFinalRep\HDS_GestionClinica\ECE-FIAD2 (Backend B)\Aplicacion\obj\Debug\net9.0\refint\Aplicacion.dll
+C:\Users\rodri\OneDrive\Documentos\6toSemestre\HerramientasDeDesarrolloDeSoftware\ProyectoFinalRep\HDS_GestionClinica\ECE-FIAD2 (Backend B)\Aplicacion\obj\Debug\net9.0\Aplicacion.pdb
+C:\Users\rodri\OneDrive\Documentos\6toSemestre\HerramientasDeDesarrolloDeSoftware\ProyectoFinalRep\HDS_GestionClinica\ECE-FIAD2 (Backend B)\Aplicacion\obj\Debug\net9.0\ref\Aplicacion.dll

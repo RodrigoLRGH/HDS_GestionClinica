@@ -1,0 +1,23 @@
+C:\H_Diseno_WEB\ECE-FIAD2\Dominio\bin\Debug\net9.0\Dominio.deps.json
+C:\H_Diseno_WEB\ECE-FIAD2\Dominio\bin\Debug\net9.0\Dominio.dll
+C:\H_Diseno_WEB\ECE-FIAD2\Dominio\bin\Debug\net9.0\Dominio.pdb
+C:\H_Diseno_WEB\ECE-FIAD2\Dominio\obj\Debug\net9.0\Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\H_Diseno_WEB\ECE-FIAD2\Dominio\obj\Debug\net9.0\Dominio.AssemblyInfoInputs.cache
+C:\H_Diseno_WEB\ECE-FIAD2\Dominio\obj\Debug\net9.0\Dominio.AssemblyInfo.cs
+C:\H_Diseno_WEB\ECE-FIAD2\Dominio\obj\Debug\net9.0\Dominio.csproj.CoreCompileInputs.cache
+C:\H_Diseno_WEB\ECE-FIAD2\Dominio\obj\Debug\net9.0\Dominio.dll
+C:\H_Diseno_WEB\ECE-FIAD2\Dominio\obj\Debug\net9.0\refint\Dominio.dll
+C:\H_Diseno_WEB\ECE-FIAD2\Dominio\obj\Debug\net9.0\Dominio.pdb
+C:\H_Diseno_WEB\ECE-FIAD2\Dominio\obj\Debug\net9.0\ref\Dominio.dll
+C:\Users\rodri\OneDrive\Documentos\6toSemestre\HerramientasDeDesarrolloDeSoftware\ProyectoFinalRep\HDS_GestionClinica\ECE-FIAD2 (Backend B)\Dominio\bin\Debug\net9.0\Dominio.deps.json
+C:\Users\rodri\OneDrive\Documentos\6toSemestre\HerramientasDeDesarrolloDeSoftware\ProyectoFinalRep\HDS_GestionClinica\ECE-FIAD2 (Backend B)\Dominio\bin\Debug\net9.0\Dominio.dll
+C:\Users\rodri\OneDrive\Documentos\6toSemestre\HerramientasDeDesarrolloDeSoftware\ProyectoFinalRep\HDS_GestionClinica\ECE-FIAD2 (Backend B)\Dominio\bin\Debug\net9.0\Dominio.pdb
+C:\Users\rodri\OneDrive\Documentos\6toSemestre\HerramientasDeDesarrolloDeSoftware\ProyectoFinalRep\HDS_GestionClinica\ECE-FIAD2 (Backend B)\Dominio\obj\Debug\net9.0\Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rodri\OneDrive\Documentos\6toSemestre\HerramientasDeDesarrolloDeSoftware\ProyectoFinalRep\HDS_GestionClinica\ECE-FIAD2 (Backend B)\Dominio\obj\Debug\net9.0\Dominio.AssemblyInfoInputs.cache
+C:\Users\rodri\OneDrive\Documentos\6toSemestre\HerramientasDeDesarrolloDeSoftware\ProyectoFinalRep\HDS_GestionClinica\ECE-FIAD2 (Backend B)\Dominio\obj\Debug\net9.0\Dominio.AssemblyInfo.cs
+C:\Users\rodri\OneDrive\Documentos\6toSemestre\HerramientasDeDesarrolloDeSoftware\ProyectoFinalRep\HDS_GestionClinica\ECE-FIAD2 (Backend B)\Dominio\obj\Debug\net9.0\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\rodri\OneDrive\Documentos\6toSemestre\HerramientasDeDesarrolloDeSoftware\ProyectoFinalRep\HDS_GestionClinica\ECE-FIAD2 (Backend B)\Dominio\obj\Debug\net9.0\Dominio.sourcelink.json
+C:\Users\rodri\OneDrive\Documentos\6toSemestre\HerramientasDeDesarrolloDeSoftware\ProyectoFinalRep\HDS_GestionClinica\ECE-FIAD2 (Backend B)\Dominio\obj\Debug\net9.0\Dominio.dll
+C:\Users\rodri\OneDrive\Documentos\6toSemestre\HerramientasDeDesarrolloDeSoftware\ProyectoFinalRep\HDS_GestionClinica\ECE-FIAD2 (Backend B)\Dominio\obj\Debug\net9.0\refint\Dominio.dll
+C:\Users\rodri\OneDrive\Documentos\6toSemestre\HerramientasDeDesarrolloDeSoftware\ProyectoFinalRep\HDS_GestionClinica\ECE-FIAD2 (Backend B)\Dominio\obj\Debug\net9.0\Dominio.pdb
+C:\Users\rodri\OneDrive\Documentos\6toSemestre\HerramientasDeDesarrolloDeSoftware\ProyectoFinalRep\HDS_GestionClinica\ECE-FIAD2 (Backend B)\Dominio\obj\Debug\net9.0\ref\Dominio.dll

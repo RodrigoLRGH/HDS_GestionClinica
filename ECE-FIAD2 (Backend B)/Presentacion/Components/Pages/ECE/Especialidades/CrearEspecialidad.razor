@@ -1,0 +1,55 @@
+﻿@page "/crear-especialidad"
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-sm-12">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-header bg-success text-white rounded-top-4">
+                    <h5 class="mb-0">
+                        <i class="fas fa-plus-circle me-2"></i>Registro de nueva especialidad
+                    </h5>
+                </div>
+                <div class="card-body p-4 bg-success-subtle">
+                    <EditForm Model="@crearEspecialidadDTO" OnValidSubmit="@GrabarEspecialidad">
+                        <FluentValidator />
+
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label class="form-label fw-semibold">
+                                    <i class="fas fa-stethoscope me-1"></i> Nombre de la Especialidad
+                                </label>
+                                <InputText class="form-control" placeholder="Ej: Cardiología"
+                                           @bind-Value="crearEspecialidadDTO.Nombre" />
+                                <ValidationMessage For="@(() => crearEspecialidadDTO.Nombre)" class="text-danger small" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label class="form-label fw-semibold">
+                                    <i class="fas fa-align-left me-1"></i> Descripción
+                                </label>
+                                <InputTextArea class="form-control" rows="4"
+                                               @bind-Value="crearEspecialidadDTO.Descripcion"
+                                               maxlength="500" />
+                                <ValidationMessage For="@(() => crearEspecialidadDTO.Descripcion)" class="text-danger small" />
+                                <small class="text-muted">
+                                    Caracteres restantes: @(500 - (crearEspecialidadDTO.Descripcion?.Length ?? 0))
+                                </small>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end gap-2 mt-3">
+                            <button type="button" class="btn btn-secondary px-4" @onclick="Cancelar">
+                                <i class="fas fa-times me-1"></i> Cancelar
+                            </button>
+                            <button type="submit" class="btn btn-success px-4">
+                                <i class="fas fa-save me-1"></i> Guardar Especialidad
+                            </button>
+                        </div>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

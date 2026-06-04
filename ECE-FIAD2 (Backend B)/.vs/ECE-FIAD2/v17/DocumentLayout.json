@@ -1,0 +1,190 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ProyectoFinalRep\\HDS_GestionClinica\\ECE-FIAD2 (Backend B)\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FD76CEC3-DB1A-46ED-90F1-DD9D75070E44}|Aplicacion\\Aplicacion.csproj|c:\\users\\rodri\\onedrive\\documentos\\6tosemestre\\herramientasdedesarrollodesoftware\\proyectofinalrep\\hds_gestionclinica\\ece-fiad2 (backend b)\\aplicacion\\servicios\\implementaciones\\evolucionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD76CEC3-DB1A-46ED-90F1-DD9D75070E44}|Aplicacion\\Aplicacion.csproj|solutionrelative:aplicacion\\servicios\\implementaciones\\evolucionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA7CA07C-FF52-4D4F-A574-E30567CF06BF}|Infraestructura\\Infraestructura.csproj|c:\\users\\rodri\\onedrive\\documentos\\6tosemestre\\herramientasdedesarrollodesoftware\\proyectofinalrep\\hds_gestionclinica\\ece-fiad2 (backend b)\\infraestructura\\repositorios\\evolucionrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA7CA07C-FF52-4D4F-A574-E30567CF06BF}|Infraestructura\\Infraestructura.csproj|solutionrelative:infraestructura\\repositorios\\evolucionrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD76CEC3-DB1A-46ED-90F1-DD9D75070E44}|Aplicacion\\Aplicacion.csproj|c:\\users\\rodri\\onedrive\\documentos\\6tosemestre\\herramientasdedesarrollodesoftware\\proyectofinalrep\\hds_gestionclinica\\ece-fiad2 (backend b)\\aplicacion\\servicios\\implementaciones\\citaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD76CEC3-DB1A-46ED-90F1-DD9D75070E44}|Aplicacion\\Aplicacion.csproj|solutionrelative:aplicacion\\servicios\\implementaciones\\citaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD76CEC3-DB1A-46ED-90F1-DD9D75070E44}|Aplicacion\\Aplicacion.csproj|c:\\users\\rodri\\onedrive\\documentos\\6tosemestre\\herramientasdedesarrollodesoftware\\proyectofinalrep\\hds_gestionclinica\\ece-fiad2 (backend b)\\aplicacion\\abstracciones\\ievolucionrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD76CEC3-DB1A-46ED-90F1-DD9D75070E44}|Aplicacion\\Aplicacion.csproj|solutionrelative:aplicacion\\abstracciones\\ievolucionrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD76CEC3-DB1A-46ED-90F1-DD9D75070E44}|Aplicacion\\Aplicacion.csproj|c:\\users\\rodri\\onedrive\\documentos\\6tosemestre\\herramientasdedesarrollodesoftware\\proyectofinalrep\\hds_gestionclinica\\ece-fiad2 (backend b)\\aplicacion\\servicios\\interfaces\\ievolucionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD76CEC3-DB1A-46ED-90F1-DD9D75070E44}|Aplicacion\\Aplicacion.csproj|solutionrelative:aplicacion\\servicios\\interfaces\\ievolucionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B496B70-D3D4-4127-9671-533CC70A1CBE}|Presentacion\\Presentacion.csproj|c:\\users\\rodri\\onedrive\\documentos\\6tosemestre\\herramientasdedesarrollodesoftware\\proyectofinalrep\\hds_gestionclinica\\ece-fiad2 (backend b)\\presentacion\\controllers\\historialcontroller\\historialcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B496B70-D3D4-4127-9671-533CC70A1CBE}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\controllers\\historialcontroller\\historialcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B496B70-D3D4-4127-9671-533CC70A1CBE}|Presentacion\\Presentacion.csproj|c:\\users\\rodri\\onedrive\\documentos\\6tosemestre\\herramientasdedesarrollodesoftware\\proyectofinalrep\\hds_gestionclinica\\ece-fiad2 (backend b)\\presentacion\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1B496B70-D3D4-4127-9671-533CC70A1CBE}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A363A00-135D-43FB-AF18-9DE3D75949D1}|Dominio\\Dominio.csproj|c:\\users\\rodri\\onedrive\\documentos\\6tosemestre\\herramientasdedesarrollodesoftware\\proyectofinalrep\\hds_gestionclinica\\ece-fiad2 (backend b)\\dominio\\entidades\\bases\\entidadbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A363A00-135D-43FB-AF18-9DE3D75949D1}|Dominio\\Dominio.csproj|solutionrelative:dominio\\entidades\\bases\\entidadbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA7CA07C-FF52-4D4F-A574-E30567CF06BF}|Infraestructura\\Infraestructura.csproj|c:\\users\\rodri\\onedrive\\documentos\\6tosemestre\\herramientasdedesarrollodesoftware\\proyectofinalrep\\hds_gestionclinica\\ece-fiad2 (backend b)\\infraestructura\\migraciones\\20260601004118_creacioninicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA7CA07C-FF52-4D4F-A574-E30567CF06BF}|Infraestructura\\Infraestructura.csproj|solutionrelative:infraestructura\\migraciones\\20260601004118_creacioninicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EvolucionRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ProyectoFinalRep\\HDS_GestionClinica\\ECE-FIAD2 (Backend B)\\Infraestructura\\Repositorios\\EvolucionRepositorio.cs",
+              "RelativeDocumentMoniker": "Infraestructura\\Repositorios\\EvolucionRepositorio.cs",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ProyectoFinalRep\\HDS_GestionClinica\\ECE-FIAD2 (Backend B)\\Infraestructura\\Repositorios\\EvolucionRepositorio.cs",
+              "RelativeToolTip": "Infraestructura\\Repositorios\\EvolucionRepositorio.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAwwDkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T00:56:47.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IEvolucionRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ProyectoFinalRep\\HDS_GestionClinica\\ECE-FIAD2 (Backend B)\\Aplicacion\\Abstracciones\\IEvolucionRepositorio.cs",
+              "RelativeDocumentMoniker": "Aplicacion\\Abstracciones\\IEvolucionRepositorio.cs",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ProyectoFinalRep\\HDS_GestionClinica\\ECE-FIAD2 (Backend B)\\Aplicacion\\Abstracciones\\IEvolucionRepositorio.cs",
+              "RelativeToolTip": "Aplicacion\\Abstracciones\\IEvolucionRepositorio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T00:56:46.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EvolucionService.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ProyectoFinalRep\\HDS_GestionClinica\\ECE-FIAD2 (Backend B)\\Aplicacion\\Servicios\\Implementaciones\\EvolucionService.cs",
+              "RelativeDocumentMoniker": "Aplicacion\\Servicios\\Implementaciones\\EvolucionService.cs",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ProyectoFinalRep\\HDS_GestionClinica\\ECE-FIAD2 (Backend B)\\Aplicacion\\Servicios\\Implementaciones\\EvolucionService.cs",
+              "RelativeToolTip": "Aplicacion\\Servicios\\Implementaciones\\EvolucionService.cs",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAjwJIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T00:55:56.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CitaService.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ProyectoFinalRep\\HDS_GestionClinica\\ECE-FIAD2 (Backend B)\\Aplicacion\\Servicios\\Implementaciones\\CitaService.cs",
+              "RelativeDocumentMoniker": "Aplicacion\\Servicios\\Implementaciones\\CitaService.cs",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ProyectoFinalRep\\HDS_GestionClinica\\ECE-FIAD2 (Backend B)\\Aplicacion\\Servicios\\Implementaciones\\CitaService.cs",
+              "RelativeToolTip": "Aplicacion\\Servicios\\Implementaciones\\CitaService.cs",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAwwKAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T23:55:31.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IEvolucionService.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ProyectoFinalRep\\HDS_GestionClinica\\ECE-FIAD2 (Backend B)\\Aplicacion\\Servicios\\Interfaces\\IEvolucionService.cs",
+              "RelativeDocumentMoniker": "Aplicacion\\Servicios\\Interfaces\\IEvolucionService.cs",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ProyectoFinalRep\\HDS_GestionClinica\\ECE-FIAD2 (Backend B)\\Aplicacion\\Servicios\\Interfaces\\IEvolucionService.cs",
+              "RelativeToolTip": "Aplicacion\\Servicios\\Interfaces\\IEvolucionService.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAhwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T00:55:42.938Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HistorialController.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ProyectoFinalRep\\HDS_GestionClinica\\ECE-FIAD2 (Backend B)\\Presentacion\\Controllers\\HistorialController\\HistorialController.cs",
+              "RelativeDocumentMoniker": "Presentacion\\Controllers\\HistorialController\\HistorialController.cs",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ProyectoFinalRep\\HDS_GestionClinica\\ECE-FIAD2 (Backend B)\\Presentacion\\Controllers\\HistorialController\\HistorialController.cs",
+              "RelativeToolTip": "Presentacion\\Controllers\\HistorialController\\HistorialController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAewBgAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T00:53:05.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20260601004118_CreacionInicial.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ProyectoFinalRep\\HDS_GestionClinica\\ECE-FIAD2 (Backend B)\\Infraestructura\\Migraciones\\20260601004118_CreacionInicial.cs",
+              "RelativeDocumentMoniker": "Infraestructura\\Migraciones\\20260601004118_CreacionInicial.cs",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ProyectoFinalRep\\HDS_GestionClinica\\ECE-FIAD2 (Backend B)\\Infraestructura\\Migraciones\\20260601004118_CreacionInicial.cs",
+              "RelativeToolTip": "Infraestructura\\Migraciones\\20260601004118_CreacionInicial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T00:41:18.737Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ProyectoFinalRep\\HDS_GestionClinica\\ECE-FIAD2 (Backend B)\\Presentacion\\appsettings.json",
+              "RelativeDocumentMoniker": "Presentacion\\appsettings.json",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ProyectoFinalRep\\HDS_GestionClinica\\ECE-FIAD2 (Backend B)\\Presentacion\\appsettings.json",
+              "RelativeToolTip": "Presentacion\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-01T00:35:41.046Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EntidadBase.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ProyectoFinalRep\\HDS_GestionClinica\\ECE-FIAD2 (Backend B)\\Dominio\\Entidades\\Bases\\EntidadBase.cs",
+              "RelativeDocumentMoniker": "Dominio\\Entidades\\Bases\\EntidadBase.cs",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documentos\\6toSemestre\\HerramientasDeDesarrolloDeSoftware\\ProyectoFinalRep\\HDS_GestionClinica\\ECE-FIAD2 (Backend B)\\Dominio\\Entidades\\Bases\\EntidadBase.cs",
+              "RelativeToolTip": "Dominio\\Entidades\\Bases\\EntidadBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T00:35:35.099Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

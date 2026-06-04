@@ -1,0 +1,109 @@
+﻿@page "/detalles-doctor/{id:int}"
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-sm-12">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-header bg-info text-white text-center rounded-top-4">
+                    <h4 class="mb-0">
+                        <i class="fas fa-user-md me-2"></i>Detalles del Doctor
+                    </h4>
+                </div>
+                <div class="card-body p-4 bg-info-subtle">
+                    @if (doctor == null)
+                    {
+                        <div class="text-center py-4">
+                            <i class="fas fa-spinner fa-pulse fa-2x text-info"></i>
+                            <p class="mt-2">Cargando información...</p>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="row mb-3">
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label fw-semibold text-muted">
+                                    <i class="fas fa-user me-1"></i> Nombres
+                                </label>
+                                <p class="form-control-plaintext fw-bold bg-light px-2 rounded">@doctor.Nombres</p>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label fw-semibold text-muted">
+                                    <i class="fas fa-user me-1"></i> Apellidos
+                                </label>
+                                <p class="form-control-plaintext fw-bold bg-light px-2 rounded">@doctor.Apellidos</p>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label fw-semibold text-muted">
+                                    <i class="fas fa-stethoscope me-1"></i> Especialidad
+                                </label>
+                                <p class="form-control-plaintext fw-bold bg-light px-2 rounded">@doctor.NombreEspecialidad</p>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label fw-semibold text-muted">
+                                    <i class="fas fa-phone me-1"></i> Teléfono
+                                </label>
+                                <p class="form-control-plaintext fw-bold bg-light px-2 rounded">
+                                    @(string.IsNullOrEmpty(doctor.Telefono) ? "—" : doctor.Telefono)
+                                </p>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label fw-semibold text-muted">
+                                    <i class="fas fa-envelope me-1"></i> Email
+                                </label>
+                                <p class="form-control-plaintext fw-bold bg-light px-2 rounded">
+                                    @(string.IsNullOrEmpty(doctor.Email) ? "—" : doctor.Email)
+                                </p>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label fw-semibold text-muted">
+                                    <i class="fas fa-calendar-alt me-1"></i> F. Contratación
+                                </label>
+                                <p class="form-control-plaintext fw-bold bg-light px-2 rounded">
+                                    @doctor.FechaContratacion.ToString("dd/MM/yyyy")
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-8 mb-3">
+                                <label class="form-label fw-semibold text-muted">
+                                    <i class="fas fa-clock me-1"></i> Horario de Atención
+                                </label>
+                                <p class="form-control-plaintext fw-bold bg-light px-2 rounded">
+                                    @(string.IsNullOrEmpty(doctor.HorarioAtencion) ? "—" : doctor.HorarioAtencion)
+                                </p>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label fw-semibold text-muted">Estado</label>
+                                <p class="form-control-plaintext fw-bold bg-light px-2 rounded">
+                                    @if (doctor.Activo)
+                                    {
+                                        <i class="fas fa-check-circle text-success fs-5 me-1"></i>
+                                        <span class="text-success">Activo</span>
+                                    }
+                                    else
+                                    {
+                                        <i class="fas fa-times-circle text-danger fs-5 me-1"></i>
+                                        <span class="text-danger">Inactivo</span>
+                                    }
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end gap-2 mt-3">
+                            <button type="button" class="btn btn-secondary px-4" @onclick="Volver">
+                                <i class="fas fa-arrow-left me-1"></i> Volver al listado
+                            </button>
+                            <button type="button" class="btn btn-primary px-4" @onclick="Editar">
+                                <i class="fas fa-edit me-1"></i> Editar doctor
+                            </button>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,156 @@
+﻿@page "/editar-cita/{id:int}"
+@using Dominio.Enumeraciones
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-sm-12">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-header bg-warning text-dark rounded-top-4">
+                    <h5 class="mb-0">
+                        <i class="fas fa-edit me-2"></i>Editar Cita
+                    </h5>
+                </div>
+                <div class="card-body p-4 bg-warning-subtle">
+                    @if (cargando)
+                    {
+                        <div class="text-center py-4">
+                            <i class="fas fa-spinner fa-pulse fa-2x text-warning"></i>
+                            <p class="mt-2">Cargando datos de la cita...</p>
+                        </div>
+                    }
+                    else if (citaOriginal == null)
+                    {
+                        <div class="alert alert-warning text-center">
+                            <i class="fas fa-exclamation-triangle me-2"></i>Cita no encontrada.
+                        </div>
+                    }
+                    else
+                    {
+                        <EditForm Model="@citaEditor" OnValidSubmit="@GrabarCita">
+                            <FluentValidator />
+
+                            <div class="row mb-3">
+                                <div class="col-md-12">
+                                    <div class="alert alert-secondary">
+                                        <strong>ID de Cita:</strong> @citaEditor.Id
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label fw-semibold">
+                                        <i class="fas fa-user me-1"></i> Paciente
+                                    </label>
+                                    <InputSelect class="form-select" @bind-Value="citaEditor.IdPaciente">
+                                        <option value="0">-- Seleccione un paciente --</option>
+                                        @foreach (var paciente in pacientes)
+                                        {
+                                            <option value="@paciente.Id">@paciente.Nombres</option>
+                                        }
+                                    </InputSelect>
+                                    <ValidationMessage For="@(() => citaEditor.IdPaciente)" class="text-danger small" />
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label fw-semibold">
+                                        <i class="fas fa-user-md me-1"></i> Doctor
+                                    </label>
+                                    <InputSelect class="form-select" @bind-Value="citaEditor.IdDoctor">
+                                        <option value="0">-- Seleccione un doctor --</option>
+                                        @foreach (var doctor in doctores)
+                                        {
+                                            <option value="@doctor.Id">@doctor.NombreCompleto - @doctor.NombreEspecialidad</option>
+                                        }
+                                    </InputSelect>
+                                    <ValidationMessage For="@(() => citaEditor.IdDoctor)" class="text-danger small" />
+                                </div>
+                            </div>
+
+
+
+
+
+                            <div class="row">
+                                <div class="col-md-12 mb-3">
+                                    <label class="form-label fw-semibold">
+                                        <i class="fas fa-calendar-alt me-1"></i> Fecha y Hora
+                                    </label>
+                                    <input type="datetime-local" class="form-control"
+                                           @bind="citaEditor.FechaHora"
+                                           @bind:format="yyyy-MM-ddTHH:mm" />
+                                    <ValidationMessage For="@(() => citaEditor.FechaHora)" class="text-danger small" />
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+                            <div class="row">
+                                <div class="col-md-12 mb-3">
+                                    <label class="form-label fw-semibold">
+                                        <i class="fas fa-comment-medical me-1"></i> Motivo
+                                    </label>
+                                    <InputTextArea class="form-control" rows="3" @bind-Value="citaEditor.Motivo" />
+                                    <ValidationMessage For="@(() => citaEditor.Motivo)" class="text-danger small" />
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+
+                            <div class="row">
+                                <div class="col-md-12 mb-3">
+                                    <label class="form-label fw-semibold">
+                                        <i class="fas fa-sticky-note me-1"></i> Notas (opcional)
+                                    </label>
+                                    <InputTextArea class="form-control" rows="2" @bind-Value="citaEditor.Notas" />
+                                    <ValidationMessage For="@(() => citaEditor.Notas)" class="text-danger small" />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label fw-semibold">
+                                        <i class="fas fa-tag me-1"></i> Estado
+                                    </label>
+                                    <InputSelect class="form-select" @bind-Value="citaEditor.Estado">
+                                        @foreach (var estado in Enum.GetValues<EstadoCita>())
+                                        {
+                                            <option value="@((int)estado)">@estado</option>
+                                        }
+                                    </InputSelect>
+                                    <ValidationMessage For="@(() => citaEditor.Estado)" class="text-danger small" />
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-end gap-2 mt-3">
+                                <button type="button" class="btn btn-secondary px-4" @onclick="Cancelar">
+                                    <i class="fas fa-times me-1"></i> Cancelar
+                                </button>
+                                <button type="submit" class="btn btn-primary px-4" disabled="@procesando">
+                                    @if (procesando)
+                                    {
+                                        <span class="spinner-border spinner-border-sm me-1" role="status" aria-hidden="true"></span>
+                                    }
+                                    <i class="fas fa-save me-1"></i> Actualizar Cita
+                                </button>
+                            </div>
+                        </EditForm>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

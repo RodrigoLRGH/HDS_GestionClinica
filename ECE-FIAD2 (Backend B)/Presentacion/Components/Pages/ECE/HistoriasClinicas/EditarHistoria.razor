@@ -1,0 +1,96 @@
+﻿@page "/editar-historia/{id:int}"
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-sm-12">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-header bg-warning text-dark rounded-top-4">
+                    <h5 class="mb-0">
+                        <i class="fas fa-edit me-2"></i>Editar Historia Clínica
+                    </h5>
+                </div>
+                <div class="card-body p-4 bg-warning-subtle">
+                    @if (cargando)
+                    {
+                        <div class="text-center py-4">
+                            <i class="fas fa-spinner fa-pulse fa-2x text-warning"></i>
+                            <p class="mt-2">Cargando datos...</p>
+                        </div>
+                    }
+                    else
+                    {
+                        <EditForm Model="@historiaEditar" OnValidSubmit="@GrabarHistoria">
+                            <FluentValidator />
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label fw-semibold text-muted">
+                                        <i class="fas fa-user me-1"></i> Paciente
+                                    </label>
+                                    <p class="form-control-plaintext fw-bold bg-light px-2 rounded">
+                                        @historiaOriginal?.PacienteNombre
+                                    </p>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label fw-semibold text-muted">
+                                        <i class="fas fa-calendar-alt me-1"></i> Fecha de Apertura
+                                    </label>
+                                    <p class="form-control-plaintext fw-bold bg-light px-2 rounded">
+                                        @historiaOriginal?.FechaApertura.ToString("dd/MM/yyyy")
+                                    </p>
+                                </div>
+                            
+                            
+                            
+                            
+                            </div>
+
+                            <h5 class="mb-3 bg-warning-subtle p-2 rounded">
+                                <i class="fas fa-edit me-2"></i>Datos editables
+                            </h5>
+                            <hr class="my-3 text-warning" />
+
+                            <div class="row">
+                                <div class="col-md-12 mb-3">
+                                    <label class="form-label fw-semibold">
+                                        <i class="fas fa-allergies me-1"></i> Alergias
+                                    </label>
+                                    <InputTextArea @bind-Value="historiaEditar.Alergias" class="form-control fw-bold bg-light" rows="3" />
+                                    <small class="text-muted">@(historiaEditar.Alergias?.Length ?? 0) / 500</small>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 mb-3">
+                                    <label class="form-label fw-semibold">
+                                        <i class="fas fa-users me-1"></i> Antecedentes Familiares
+                                    </label>
+                                    <InputTextArea @bind-Value="historiaEditar.AntecedentesFamiliares" class="form-control fw-bold bg-light" rows="3" />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 mb-3">
+                                    <label class="form-label fw-semibold">
+                                        <i class="fas fa-user me-1"></i> Antecedentes Personales
+                                    </label>
+                                    <InputTextArea @bind-Value="historiaEditar.AntecedentesPersonales" class="form-control fw-bold bg-light" rows="3" />
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-end gap-2 mt-3">
+                                <button type="button" class="btn btn-secondary px-4" @onclick="Cancelar">
+                                    <i class="fas fa-times me-1"></i> Cancelar
+                                </button>
+                                <button type="submit" class="btn btn-primary px-4">
+                                    <i class="fas fa-save me-1"></i> Guardar Cambios
+                                </button>
+                            </div>
+                        </EditForm>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

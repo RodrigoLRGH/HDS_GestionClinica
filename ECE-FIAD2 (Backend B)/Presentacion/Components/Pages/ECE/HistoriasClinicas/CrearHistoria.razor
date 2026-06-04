@@ -1,0 +1,177 @@
+﻿@* @page "/crear-historia"
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-sm-12">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-header bg-success text-white rounded-top-4">
+                    <h5 class="mb-0">
+                        <i class="fas fa-file-medical-alt me-2"></i>Nueva Historia Clínica
+                    </h5>
+                </div>
+                <div class="card-body p-4 bg-success-subtle">
+                    <EditForm Model="@nuevaHistoria" OnValidSubmit="@GrabarHistoria">
+                        <FluentValidator />
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-semibold">
+                                    <i class="fas fa-user me-1"></i> Paciente
+                                </label>
+                                <InputSelect @bind-Value="nuevaHistoria.IdPaciente" class="form-select">
+                                    <option value="0">-- Seleccione --</option>
+                                    @foreach (var p in pacientes)
+                                    {
+                                        <option value="@p.Id">@p.Nombres</option>
+                                    }
+                                </InputSelect>
+                                <ValidationMessage For="@(() => nuevaHistoria.IdPaciente)" class="text-danger small" />
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-semibold">
+                                    <i class="fas fa-calendar-alt me-1"></i> Fecha de Apertura
+                                </label>
+                                <InputDate @bind-Value="nuevaHistoria.FechaApertura" class="form-control" />
+                                <ValidationMessage For="@(() => nuevaHistoria.FechaApertura)" class="text-danger small" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label class="form-label fw-semibold">
+                                    <i class="fas fa-allergies me-1"></i> Alergias
+                                </label>
+                                <InputTextArea @bind-Value="nuevaHistoria.Alergias" class="form-control" rows="3" />
+                                <small class="text-muted">@(nuevaHistoria.Alergias?.Length ?? 0) / 500</small>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label class="form-label fw-semibold">
+                                    <i class="fas fa-users me-1"></i> Antecedentes Familiares
+                                </label>
+                                <InputTextArea @bind-Value="nuevaHistoria.AntecedentesFamiliares" class="form-control" rows="3" />
+                                <small class="text-muted">@(nuevaHistoria.AntecedentesFamiliares?.Length ?? 0) / 500</small>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label class="form-label fw-semibold">
+                                    <i class="fas fa-user me-1"></i> Antecedentes Personales
+                                </label>
+                                <InputTextArea @bind-Value="nuevaHistoria.AntecedentesPersonales" class="form-control" rows="3" />
+                                <small class="text-muted">@(nuevaHistoria.AntecedentesPersonales?.Length ?? 0) / 500</small>
+                            </div>
+                        </div>
+
+
+
+                        <div class="d-flex justify-content-end gap-2 mt-3">
+                            <button type="button" class="btn btn-secondary px-4" @onclick="Cancelar">
+                                <i class="fas fa-times me-1"></i> Cancelar
+                            </button>
+                            <button type="submit" class="btn btn-success px-4">
+                                <i class="fas fa-save me-1"></i> Guardar
+                            </button>
+                        </div>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> *@
+
+@page "/crear-historia"
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-sm-12">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-header bg-success text-white rounded-top-4">
+                    <h5 class="mb-0">
+                        <i class="fas fa-file-medical-alt me-2"></i>Nueva Historia Clínica
+                    </h5>
+                </div>
+                <div class="card-body p-4 bg-success-subtle">
+                    <EditForm Model="@nuevaHistoria" OnValidSubmit="@GrabarHistoria">
+                        <FluentValidator />
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-semibold">
+                                    <i class="fas fa-user me-1"></i> Paciente
+                                </label>
+                                <InputSelect @bind-Value="nuevaHistoria.IdPaciente" class="form-select">
+                                    <option value="0">-- Seleccione --</option>
+                                    @foreach (var p in pacientes)
+                                    {
+                                        <option value="@p.Id">@p.Nombres</option>
+                                    }
+                                </InputSelect>
+                                <ValidationMessage For="@(() => nuevaHistoria.IdPaciente)" class="text-danger small" />
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-semibold">
+                                    <i class="fas fa-calendar-alt me-1"></i> Fecha de Apertura
+                                </label>
+                                <InputDate @bind-Value="nuevaHistoria.FechaApertura" class="form-control" />
+                                <ValidationMessage For="@(() => nuevaHistoria.FechaApertura)" class="text-danger small" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label class="form-label fw-semibold">
+                                    <i class="fas fa-allergies me-1"></i> Alergias
+                                </label>
+                                <InputTextArea @bind-Value="nuevaHistoria.Alergias" class="form-control" rows="3" />
+                                <small class="text-muted">@(nuevaHistoria.Alergias?.Length ?? 0) / 500</small>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label class="form-label fw-semibold">
+                                    <i class="fas fa-users me-1"></i> Antecedentes Familiares
+                                </label>
+                                <InputTextArea @bind-Value="nuevaHistoria.AntecedentesFamiliares" class="form-control" rows="3" />
+                                <small class="text-muted">@(nuevaHistoria.AntecedentesFamiliares?.Length ?? 0) / 500</small>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label class="form-label fw-semibold">
+                                    <i class="fas fa-user me-1"></i> Antecedentes Personales
+                                </label>
+                                <InputTextArea @bind-Value="nuevaHistoria.AntecedentesPersonales" class="form-control" rows="3" />
+                                <small class="text-muted">@(nuevaHistoria.AntecedentesPersonales?.Length ?? 0) / 500</small>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end gap-2 mt-3">
+                            <button type="button" class="btn btn-secondary px-4"
+                                    @onclick="Cancelar" disabled="@procesando">
+                                <i class="fas fa-times me-1"></i> Cancelar
+                            </button>
+                            <button type="submit" class="btn btn-success px-4"
+                                    disabled="@procesando">
+                                @* ← evita doble submit *@
+                                @if (procesando)
+                                {
+                                    <span class="spinner-border spinner-border-sm me-1"
+                                          role="status" aria-hidden="true"></span>
+                                }
+                                <i class="fas fa-save me-1"></i> Guardar
+                            </button>
+                        </div>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

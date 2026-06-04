@@ -1,0 +1,100 @@
+﻿@page "/crear-evolucion"
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-sm-12">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-header bg-success text-white rounded-top-4">
+                    <h5 class="mb-0">
+                        <i class="fas fa-notes-medical me-2"></i>Nueva Evolución
+                    </h5>
+                </div>
+                <div class="card-body p-4 bg-success-subtle">
+                    <EditForm Model="@nuevaEvolucion" OnValidSubmit="@GrabarEvolucion">
+                        <FluentValidator />
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-semibold">
+                                    <i class="fas fa-file-medical me-1"></i> Historia Clínica
+                                </label>
+                                <InputSelect @bind-Value="nuevaEvolucion.IdHistoriaClinica" class="form-select">
+                                    <option value="0">-- Seleccione --</option>
+                                    @foreach (var h in historias)
+                                    {
+                                        <option value="@h.Id">@h.PacienteNombre</option>
+                                    }
+                                </InputSelect>
+                                <ValidationMessage For="@(() => nuevaEvolucion.IdHistoriaClinica)" class="text-danger small" />
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-semibold">
+                                    <i class="fas fa-user-md me-1"></i> Doctor
+                                </label>
+                                <InputSelect @bind-Value="nuevaEvolucion.IdDoctor" class="form-select">
+                                    <option value="0">-- Seleccione --</option>
+                                    @foreach (var d in doctores)
+                                    {
+                                        <option value="@d.Id">@d.NombreCompleto - @d.NombreEspecialidad</option>
+                                    }
+                                </InputSelect>
+                                <ValidationMessage For="@(() => nuevaEvolucion.IdDoctor)" class="text-danger small" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label class="form-label fw-semibold">
+                                    <i class="fas fa-calendar-alt me-1"></i> Fecha
+                                </label>
+                                <InputDate @bind-Value="nuevaEvolucion.Fecha" class="form-control" />
+                                <ValidationMessage For="@(() => nuevaEvolucion.Fecha)" class="text-danger small" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label class="form-label fw-semibold">
+                                    <i class="fas fa-diagnoses me-1"></i> Diagnóstico
+                                </label>
+                                <InputTextArea @bind-Value="nuevaEvolucion.Diagnostico" class="form-control" rows="3" />
+                                <ValidationMessage For="@(() => nuevaEvolucion.Diagnostico)" class="text-danger small" />
+                                <small class="text-muted">@(nuevaEvolucion.Diagnostico?.Length ?? 0) / 500</small>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label class="form-label fw-semibold">
+                                    <i class="fas fa-pills me-1"></i> Tratamiento
+                                </label>
+                                <InputTextArea @bind-Value="nuevaEvolucion.Tratamiento" class="form-control" rows="3" />
+                                <ValidationMessage For="@(() => nuevaEvolucion.Tratamiento)" class="text-danger small" />
+                                <small class="text-muted">@(nuevaEvolucion.Tratamiento?.Length ?? 0) / 500</small>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label class="form-label fw-semibold">
+                                    <i class="fas fa-sticky-note me-1"></i> Notas (opcional)
+                                </label>
+                                <InputTextArea @bind-Value="nuevaEvolucion.Notas" class="form-control" rows="2" />
+                                <small class="text-muted">@(nuevaEvolucion.Notas?.Length ?? 0) / 1000</small>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end gap-2 mt-3">
+                            <button type="button" class="btn btn-secondary px-4" @onclick="Cancelar">
+                                <i class="fas fa-times me-1"></i> Cancelar
+                            </button>
+                            <button type="submit" class="btn btn-success px-4">
+                                <i class="fas fa-save me-1"></i> Guardar Evolución
+                            </button>
+                        </div>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

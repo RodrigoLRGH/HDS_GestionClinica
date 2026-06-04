@@ -1,0 +1,119 @@
+﻿@page "/detalles-cita/{id:int}"
+@using Aplicacion.DTOs.Citas
+@using Presentacion.Servicios
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-sm-12">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-header bg-info text-white rounded-top-4">
+                    <h4 class="mb-0">
+                        <i class="fas fa-calendar-alt me-2"></i>Detalles de la Cita
+                    </h4>
+                </div>
+                <div class="card-body p-4 bg-info-subtle">
+                    @if (cargando)
+                    {
+                        <div class="text-center py-4">
+                            <i class="fas fa-spinner fa-pulse fa-2x text-info"></i>
+                            <p class="mt-2">Cargando detalles...</p>
+                        </div>
+                    }
+                    else if (cita == null)
+                    {
+                        <div class="alert alert-warning text-center">
+                            <i class="fas fa-exclamation-triangle me-2"></i>Cita no encontrada.
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="row mb-4">
+                            <div class="col-md-12">
+                                <div class="alert @(cita.Estado.ToString() == "Cancelada" ? "alert-danger" : "alert-info")">
+                                    <h5 class="mb-0">
+                                        <i class="fas fa-info-circle me-2"></i>
+                                        Estado: <strong>@cita.Estado</strong>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-semibold text-muted">
+                                    <i class="fas fa-user me-1"></i> Paciente
+                                </label>
+                                <p class="form-control-plaintext fw-bold bg-light p-2 rounded">@cita.NombrePaciente</p>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-semibold text-muted">
+                                    <i class="fas fa-user-md me-1"></i> Doctor
+                                </label>
+                                <p class="form-control-plaintext fw-bold bg-light p-2 rounded">@cita.NombreDoctor</p>
+                                <small class="text-muted">Especialidad: @cita.NombreEspecialidad</small>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-12 mb-3">
+                                <label class="form-label fw-semibold text-muted">
+                                    <i class="fas fa-calendar-alt me-1"></i> Fecha y Hora
+                                </label>
+                                <p class="form-control-plaintext fw-bold bg-light p-2 rounded">@cita.FechaHora.ToString("dd/MM/yyyy HH:mm")</p>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-12 mb-3">
+                                <label class="form-label fw-semibold text-muted">
+                                    <i class="fas fa-comment-medical me-1"></i> Motivo
+                                </label>
+                                <p class="form-control-plaintext bg-light p-2 rounded">@cita.Motivo</p>
+                            </div>
+                        </div>
+
+                        @if (!string.IsNullOrEmpty(cita.Notas))
+                        {
+                            <div class="row mb-4">
+                                <div class="col-md-12 mb-3">
+                                    <label class="form-label fw-semibold text-muted">
+                                        <i class="fas fa-sticky-note me-1"></i> Notas
+                                    </label>
+                                    <p class="form-control-plaintext bg-light p-2 rounded">@cita.Notas</p>
+                                </div>
+                            </div>
+                        }
+
+                        <hr />
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <small class="text-muted">
+                                    <i class="fas fa-clock me-1"></i>
+                                    Creada: @cita.FechaCreacion.ToString("dd/MM/yyyy HH:mm")
+                                    @if (cita.FechaModificacion.HasValue)
+                                    {
+                                        <span class="ms-3">| Modificada: @cita.FechaModificacion.Value.ToString("dd/MM/yyyy HH:mm")</span>
+                                    }
+                                    @if (cita.FechaEliminacion.HasValue)
+                                    {
+                                        <span class="ms-3 text-danger">| Eliminada: @cita.FechaEliminacion.Value.ToString("dd/MM/yyyy HH:mm")</span>
+                                    }
+                                </small>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end gap-2 mt-4">
+                            <button type="button" class="btn btn-secondary px-4" @onclick="Volver">
+                                <i class="fas fa-arrow-left me-1"></i> Volver al listado
+                            </button>
+                            <button type="button" class="btn btn-primary px-4" @onclick="Editar">
+                                <i class="fas fa-edit me-1"></i> Editar cita
+                            </button>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
