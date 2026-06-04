@@ -12,13 +12,13 @@ export const useCitas = () => {
     const cargarCitas = async () => {
         setCargando(true);
         setError(null);
+
         try {
             const response = await obtenerCitas();
             setCitas(response.data);
         } catch (error) {
             setError("Error al cargar las citas");
         } finally {
-            await new Promise(resolve => setTimeout(resolve, 1000));
             setCargando(false);
         }
     };
@@ -31,8 +31,6 @@ export const useCitas = () => {
             await cargarCitas();
             return true;
         } catch (error: any) {
-            console.log('Error detalle:', error.response?.data);
-
             setError("Error al crear la cita");
             return false;
         } finally {
